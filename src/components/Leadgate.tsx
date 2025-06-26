@@ -80,10 +80,11 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
           <>
             {/* UPDATED COPY HERE */}
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Hold On! This Isn't Just Another Page.
+              Hold On. This Isn't Just Another Page.
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-              This is your shortcut to marketing automation mastery, packed with the exact AI and automation blueprints I use to drive real business growth. But before I hand over the keys, let's make sure you're ready to put them to work.
+              This contains one of the most valuable pieces of information on marketing automation mastery, packed with the exact AI and automation blueprints I use to drive real business growth.</p>
+              <p>But before I hand over the keys, let's make sure you're ready to put them to work.
             </p>
             <div className="flex justify-center space-x-4">
               <button
@@ -103,7 +104,7 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
         ) : (
           <>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Great! Please provide your details to access the Toolkit.
+              Great. Sign up to access my newsletter.
             </h2>
             <form
               name="lead-magnet-form"
