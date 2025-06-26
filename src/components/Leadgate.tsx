@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface LeadGateProps {
-  onAccessGranted: ( ) => void;
+  onAccessGranted: () => void;
 }
 
 const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
@@ -17,59 +17,57 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
   // Check local storage on component mount
   useEffect(() => {
     const hasAccess = localStorage.getItem('toolkit_access_granted');
-    console.log("LeadGate useEffect: Checking access. Current access:", hasAccess); // LOG 1
+    console.log("LeadGate useEffect: Checking access. Current access:", hasAccess);
     if (hasAccess === 'true') {
       onAccessGranted();
     }
   }, [onAccessGranted]);
 
   const handleYesClick = () => {
-    console.log("Yes button clicked. Showing form."); // LOG 2
+    console.log("Yes button clicked. Showing form.");
     setShowForm(true);
   };
 
   const handleNoClick = () => {
-    console.log("No button clicked. Navigating to home."); // LOG 3
+    console.log("No button clicked. Navigating to home.");
     navigate('/', { replace: true });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent default form submission
-    console.log("Form submitted. Setting formSubmitting to true."); // LOG 4
+    e.preventDefault();
+    console.log("Form submitted. Setting formSubmitting to true.");
     setFormSubmitting(true);
 
     // Prepare form data for Netlify
     const formData = new FormData();
-    formData.append('form-name', 'lead-magnet-form'); // Must match the form's name attribute
+    formData.append('form-name', 'lead-magnet-form');
     formData.append('name', name);
     formData.append('company', company);
     formData.append('email', email);
 
     try {
-      // Manually submit the form data to Netlify's endpoint
-      const response = await fetch('/', { // Submit to the root URL, Netlify intercepts this
+      const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(), // Convert FormData to URL-encoded string
+        body: new URLSearchParams(formData as any).toString(),
       });
 
       if (response.ok) {
-        console.log("Form successfully submitted to Netlify."); // LOG 5
+        console.log("Form successfully submitted to Netlify.");
         localStorage.setItem('toolkit_access_granted', 'true');
-        console.log("Local storage set. toolkit_access_granted:", localStorage.getItem('toolkit_access_granted')); // LOG 6
-        onAccessGranted(); // Notify App.tsx to render Toolkit
+        console.log("Local storage set. toolkit_access_granted:", localStorage.getItem('toolkit_access_granted'));
+        onAccessGranted();
       } else {
-        console.error("Form submission failed:", response.statusText); // LOG 5 (error)
+        console.error("Form submission failed:", response.statusText);
         alert("There was an error submitting your details. Please try again.");
-        setFormSubmitting(false); // Allow re-submission
+        setFormSubmitting(false);
       }
     } catch (error) {
-      console.error("Network error during form submission:", error); // LOG 5 (network error)
+      console.error("Network error during form submission:", error);
       alert("There was a network error. Please check your connection and try again.");
-      setFormSubmitting(false); // Allow re-submission
+      setFormSubmitting(false);
     }
 
-    // Reset form fields (optional, as the page will change on success)
     setName('');
     setCompany('');
     setEmail('');
@@ -80,15 +78,19 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 max-w-md w-full text-center">
         {!showForm ? (
           <>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              First, do you think you need this, or are you scrolling by?
+            {/* UPDATED COPY HERE */}
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Hold On! This Isn't Just Another Page.
             </h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+              This is your shortcut to marketing automation mastery, packed with the exact AI and automation blueprints I use to drive real business growth. But before I hand over the keys, let's make sure you're ready to put them to work.
+            </p>
             <div className="flex justify-center space-x-4">
               <button
                 onClick={handleYesClick}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md"
               >
-                Yes, I need this!
+                Yes, I'm Ready to Scale!
               </button>
               <button
                 onClick={handleNoClick}
@@ -104,12 +106,10 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
               Great! Please provide your details to access the Toolkit.
             </h2>
             <form
-              name="lead-magnet-form" // Keep the name attribute for Netlify's detection
-              // REMOVE data-netlify="true" from here!
+              name="lead-magnet-form"
               onSubmit={handleSubmit}
               className="space-y-4"
             >
-              {/* This hidden input is crucial for Netlify to correctly identify the form */}
               <input type="hidden" name="form-name" value="lead-magnet-form" />
 
               <div>
