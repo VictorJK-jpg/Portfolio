@@ -17,31 +17,37 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
   // Check local storage on component mount
   useEffect(() => {
     const hasAccess = localStorage.getItem('toolkit_access_granted');
+    console.log("LeadGate useEffect: Checking access. Current access:", hasAccess); // LOG 1
     if (hasAccess === 'true') {
       onAccessGranted();
-      // App.tsx will handle rendering Toolkit directly if access is granted
     }
   }, [onAccessGranted]);
 
   const handleYesClick = () => {
+    console.log("Yes button clicked. Showing form."); // LOG 2
     setShowForm(true);
   };
 
   const handleNoClick = () => {
-    navigate('/', { replace: true }); // Redirect to home if they don't want access
+    console.log("No button clicked. Navigating to home."); // LOG 3
+    navigate('/', { replace: true });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSubmitting(true); // Indicate submission is in progress
+    console.log("Form submitted. Setting formSubmitting to true."); // LOG 4
+    setFormSubmitting(true);
 
-    // Netlify Forms will intercept this submission.
-    // We'll set local storage and grant access immediately for good UX.
+    // Simulate API call delay
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    console.log("Simulated delay finished. Attempting to set local storage."); // LOG 5
+    // Store access in local storage
     localStorage.setItem('toolkit_access_granted', 'true');
-    onAccessGranted(); // Notify App.tsx to render Toolkit
+    console.log("Local storage set. toolkit_access_granted:", localStorage.getItem('toolkit_access_granted')); // LOG 6
 
-    // The form will submit to Netlify's backend automatically.
-    // No need for fetch/axios here for Netlify Forms.
+    onAccessGranted(); // Notify parent component
+    console.log("onAccessGranted called."); // LOG 7
 
     // Reset form fields (optional, as the page will change)
     setName('');
@@ -77,20 +83,18 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Great! Please provide your details to access the Toolkit.
             </h2>
-            {/* This is the visible form. It will submit to Netlify. */}
             <form
-              name="lead-magnet-form" // IMPORTANT: This name must match the hidden form in index.html
-              data-netlify="true"    // IMPORTANT: This attribute tells Netlify to process the form
+              name="lead-magnet-form"
+              data-netlify="true"
               onSubmit={handleSubmit}
               className="space-y-4"
             >
-              {/* This hidden input is crucial for Netlify to correctly identify the form */}
               <input type="hidden" name="form-name" value="lead-magnet-form" />
 
               <div>
                 <input
                   type="text"
-                  name="name" // IMPORTANT: Add name attribute for Netlify Forms
+                  name="name"
                   placeholder="Your Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -101,7 +105,7 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
               <div>
                 <input
                   type="text"
-                  name="company" // IMPORTANT: Add name attribute for Netlify Forms
+                  name="company"
                   placeholder="Company Name"
                   value={company}
                   onChange={(e) => setCompany(e.target.value)}
@@ -112,7 +116,7 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
               <div>
                 <input
                   type="email"
-                  name="email" // IMPORTANT: Add name attribute for Netlify Forms
+                  name="email"
                   placeholder="Email Address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
