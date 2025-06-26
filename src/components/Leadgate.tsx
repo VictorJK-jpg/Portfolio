@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface LeadGateProps {
-  onAccessGranted: () => void;
+  onAccessGranted: ( ) => void;
 }
 
 const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
@@ -34,22 +34,42 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission
     console.log("Form submitted. Setting formSubmitting to true."); // LOG 4
     setFormSubmitting(true);
 
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Prepare form data for Netlify
+    const formData = new FormData();
+    formData.append('form-name', 'lead-magnet-form'); // Must match the form's name attribute
+    formData.append('name', name);
+    formData.append('company', company);
+    formData.append('email', email);
 
-    console.log("Simulated delay finished. Attempting to set local storage."); // LOG 5
-    // Store access in local storage
-    localStorage.setItem('toolkit_access_granted', 'true');
-    console.log("Local storage set. toolkit_access_granted:", localStorage.getItem('toolkit_access_granted')); // LOG 6
+    try {
+      // Manually submit the form data to Netlify's endpoint
+      const response = await fetch('/', { // Submit to the root URL, Netlify intercepts this
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(), // Convert FormData to URL-encoded string
+      });
 
-    onAccessGranted(); // Notify parent component
-    console.log("onAccessGranted called."); // LOG 7
+      if (response.ok) {
+        console.log("Form successfully submitted to Netlify."); // LOG 5
+        localStorage.setItem('toolkit_access_granted', 'true');
+        console.log("Local storage set. toolkit_access_granted:", localStorage.getItem('toolkit_access_granted')); // LOG 6
+        onAccessGranted(); // Notify App.tsx to render Toolkit
+      } else {
+        console.error("Form submission failed:", response.statusText); // LOG 5 (error)
+        alert("There was an error submitting your details. Please try again.");
+        setFormSubmitting(false); // Allow re-submission
+      }
+    } catch (error) {
+      console.error("Network error during form submission:", error); // LOG 5 (network error)
+      alert("There was a network error. Please check your connection and try again.");
+      setFormSubmitting(false); // Allow re-submission
+    }
 
-    // Reset form fields (optional, as the page will change)
+    // Reset form fields (optional, as the page will change on success)
     setName('');
     setCompany('');
     setEmail('');
@@ -84,11 +104,12 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
               Great! Please provide your details to access the Toolkit.
             </h2>
             <form
-              name="lead-magnet-form"
-              data-netlify="true"
+              name="lead-magnet-form" // Keep the name attribute for Netlify's detection
+              // REMOVE data-netlify="true" from here!
               onSubmit={handleSubmit}
               className="space-y-4"
             >
+              {/* This hidden input is crucial for Netlify to correctly identify the form */}
               <input type="hidden" name="form-name" value="lead-magnet-form" />
 
               <div>
