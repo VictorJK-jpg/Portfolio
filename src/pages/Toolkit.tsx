@@ -247,7 +247,6 @@ const Toolkit = () => {
           </AnimatedSection>
 
           {/* New Section: All n8n Workflows by Category */}
-          <AnimatedSection delay={400}>
             <div className="bg-white rounded-xl p-8 md:p-12 border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 dark:shadow-xl mt-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-10 text-center">
                 My n8n Workflow Blueprints
@@ -297,7 +296,6 @@ const Toolkit = () => {
                 </div>
               ))}
             </div>
-          </AnimatedSection>
 
 
           {/* New: Explore More AI & Automation Blueprints by Category (existing, consider if still needed with the above) */}
