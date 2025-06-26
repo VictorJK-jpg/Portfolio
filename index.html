@@ -21,6 +21,13 @@
 
   <body>
     <div id="root"></div>
+    <form name="lead-magnet-form" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="hidden" name="form-name" value="lead-magnet-form" />
+      <input type="text" name="bot-field" /> <!-- Honeypot field for spam prevention -->
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
