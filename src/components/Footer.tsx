@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <Link to="/" className="mb-4">
             {/* You can use your logo here, or just text */}
-            <img src="/src/assets/logo.jpg" alt="Your Company Logo" className="h-10" />
+            <img src="/logo.jpg" alt="Your Company Logo" className="h-10" />
           </Link>
           <p className="text-sm text-slate-400">
             &copy; {currentYear} Victor. All rights reserved.

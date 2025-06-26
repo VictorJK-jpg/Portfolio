@@ -72,7 +72,7 @@ const Navigation = () => {
       >
         {/* Logo - Left Aligned */}
         <Link to="/" className="flex items-center space-x-2" onClick={closeMobileMenu}>
-          <img src="/src/assets/logo.jpg" alt="Victor Digital Logo" className="h-8 w-auto" />
+          <img src="/logo.jpg" alt="Victor Logo" className="h-8 w-auto" />
         </Link>
 
         {/* Desktop Navigation Links - Centered */}
