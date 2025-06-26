@@ -42,7 +42,7 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
     const formData = new FormData();
     formData.append('form-name', 'lead-magnet-form');
     formData.append('name', name);
-    formData.append('company', company);
+    formData.append('company', company); // Company name will be sent even if empty
     formData.append('email', email);
 
     try {
@@ -78,13 +78,14 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 max-w-md w-full text-center">
         {!showForm ? (
           <>
-            {/* UPDATED COPY HERE */}
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Hold On. This Isn't Just Another Page.
             </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-              This contains one of the most valuable pieces of information on marketing automation mastery, packed with the exact AI and automation blueprints I use to drive real business growth.</p>
-              <p>But before I hand over the keys, let's make sure you're ready to put them to work.
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+              This contains one of the most valuable pieces of information on marketing automation mastery, packed with the exact AI and automation blueprints I use to drive real business growth.
+            </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+              But before I hand over the keys, let's make sure you're ready to put them to work.
             </p>
             <div className="flex justify-center space-x-4">
               <button
@@ -104,7 +105,7 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
         ) : (
           <>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Great. Sign up to access my newsletter.
+              Sign up for my Newsletter.
             </h2>
             <form
               name="lead-magnet-form"
@@ -121,18 +122,17 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-                  required
+                  required // Still required
                 />
               </div>
               <div>
                 <input
                   type="text"
                   name="company"
-                  placeholder="Company Name"
+                  placeholder="Company Name (Optional)" // Added (Optional) to placeholder
                   value={company}
                   onChange={(e) => setCompany(e.target.value)}
                   className="w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-                  required
                 />
               </div>
               <div>
@@ -143,7 +143,7 @@ const LeadGate: React.FC<LeadGateProps> = ({ onAccessGranted }) => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-                  required
+                  required // Still required
                 />
               </div>
               <button
