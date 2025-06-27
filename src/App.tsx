@@ -21,6 +21,10 @@ import NotFound from "./pages/NotFound";
 // Import the LeadGate component
 import LeadGate from "./components/Leadgate"; // <--- NEW IMPORT
 
+// Import new legal pages
+import PrivacyPolicy from "./pages/PrivacyPolicy"; // <--- NEW IMPORT
+import TermsOfService from "./pages/TermsOfService"; // <--- NEW IMPORT
+
 const queryClient = new QueryClient();
 
 const App = () => {

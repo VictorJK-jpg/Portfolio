@@ -30,8 +30,9 @@ const Footer = () => {
             <li><Link to="/toolkit" className="text-slate-300 hover:text-white transition-colors duration-200">Toolkit</Link></li>
             <li><Link to="/portfolio" className="text-slate-300 hover:text-white transition-colors duration-200">Portfolio</Link></li>
             <li><Link to="/contact" className="text-slate-300 hover:text-white transition-colors duration-200">Contact</Link></li>
-            {/* Add any other relevant links like Privacy Policy, Terms of Service */}
-            {/* <li><Link to="/privacy-policy" className="text-slate-300 hover:text-white transition-colors duration-200">Privacy Policy</Link></li> */}
+            {/* NEW LEGAL LINKS */}
+            <li><Link to="/privacy-policy" className="text-slate-300 hover:text-white transition-colors duration-200">Privacy Policy</Link></li>
+            <li><Link to="/terms-of-service" className="text-slate-300 hover:text-white transition-colors duration-200">Terms of Service</Link></li>
           </ul>
         </div>
 
