@@ -18,6 +18,12 @@ const Portfolio = () => {
     { name: 'Zapier', src: '/images/marketing-tools/zapier.png' },
     { name: 'Slack', src: '/images/marketing-tools/slack.png' },
     { name: 'ChatGPT', src: '/images/marketing-tools/chatgpt.png' },
+    { name: 'n8n', src: '/images/marketing-tools/n8n.png' }, // Essential automation tool
+    { name: 'Google Drive', src: '/images/marketing-tools/google-drive.png' },
+    { name: 'Google Docs', src: '/images/marketing-tools/google-docs.png' },
+    { name: 'Airtable', src: '/images/marketing-tools/airtable.png' },
+    { name: 'Gamma.app', src: '/images/marketing-tools/gamma.png' },
+    { name: 'YouTube', src: '/images/marketing-tools/youtube.png' },
     // Add more tools you use!
   ];
 
