@@ -1,5 +1,5 @@
 // src/App.tsx
-import React, { useState, useEffect } from 'react'; // Import useState and useEffect
+import React from 'react'; // Removed useState and useEffect as they are no longer needed for LeadGate
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -18,33 +18,16 @@ import Contact from "./pages/Contact";
 import Toolkit from "./pages/Toolkit";
 import NotFound from "./pages/NotFound";
 
-// Import the LeadGate component
-import LeadGate from "./components/Leadgate"; // <--- NEW IMPORT
-
 // Import new legal pages
-import PrivacyPolicy from "./pages/PrivacyPolicy"; // <--- NEW IMPORT
-import TermsOfService from "./pages/TermsOfService"; // <--- NEW IMPORT
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+
+// LeadGate import is removed as it's no longer used in App.tsx
 
 const queryClient = new QueryClient();
 
 const App = () => {
-  // State to manage access to the Toolkit page
-  const [hasToolkitAccess, setHasToolkitAccess] = useState(false);
-
-  // Check local storage on initial load to see if access was previously granted
-  useEffect(() => {
-    const storedAccess = localStorage.getItem('toolkit_access_granted');
-    if (storedAccess === 'true') {
-      setHasToolkitAccess(true);
-    }
-  }, []); // Empty dependency array means this runs once on mount
-
-  // Function to grant access, called by LeadGate on form submission
-  const grantToolkitAccess = () => {
-    setHasToolkitAccess(true);
-    // Note: LeadGate.tsx already sets localStorage.setItem('toolkit_access_granted', 'true');
-    // So, no need to duplicate that here.
-  };
+  // Removed all LeadGate related state and effects (hasToolkitAccess, grantToolkitAccess)
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -64,17 +47,12 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/portfolio" element={<Portfolio />} />
 
-                {/* Conditional rendering for the Toolkit page */}
-                <Route
-                  path="/toolkit"
-                  element={
-                    hasToolkitAccess ? (
-                      <Toolkit />
-                    ) : (
-                      <LeadGate onAccessGranted={grantToolkitAccess} />
-                    )
-                  }
-                />
+                {/* Toolkit page now directly accessible without LeadGate */}
+                <Route path="/toolkit" element={<Toolkit />} />
+
+                {/* Legal pages routes */}
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
 
                 <Route path="*" element={<NotFound />} />
               </Routes>
