@@ -4,24 +4,23 @@ import AnimatedSection from '@/components/AnimatedSection'; // Assuming you have
 const Portfolio = () => {
   // --- UPDATED: Data for Marketing Tools ---
   // IMPORTANT: Replace '/images/marketing-tools/...' with the actual public paths to your tool logos.
-  // You'll need to source these logos (e.g., from official brand assets or icon libraries).
   const marketingTools = [
-    { name: 'Google Analytics', src: '/images/marketing-tools/google-analytics-50.svg' },
-    { name: 'Google Ads', src: '/images/marketing-tools/google-ads-50.svg.png' },
-    { name: 'Meta Ads', src: '/images/marketing-tools/meta-50.svg' },
+    { name: 'Google Analytics', src: '/images/marketing-tools/icons8-google-analytics-50.svg' },
+    { name: 'Google Ads', src: '/images/marketing-tools/icons8-google-ads-50.svg.png' },
+    { name: 'Meta Ads', src: '/images/marketing-tools/icons8-meta-50.svg' },
     { name: 'SEMrush', src: '/images/marketing-tools/semrush.png' },
     { name: 'Ahrefs', src: '/images/marketing-tools/ahrefs.png' },
     { name: 'Mailchimp', src: '/images/marketing-tools/mailchimp.png' },
     { name: 'HubSpot', src: '/images/marketing-tools/hubspot.svg' },
-    { name: 'Canva', src: '/images/marketing-tools/canva-50.svg' },
+    { name: 'Canva', src: '/images/marketing-tools/icons8-canva-50.svg' },
     { name: 'Notion', src: '/images/marketing-tools/notion.png' },
-    { name: 'Zapier', src: '/images/marketing-tools/zapier.png' },
-    { name: 'Slack', src: '/images/marketing-tools/slack-new.png' },
-    { name: 'ChatGPT', src: '/images/marketing-tools/chatgpt.svg' },
+    { name: 'Zapier', src: '/images/marketing-tools/icons8-zapier.png' },
+    { name: 'Slack', src: '/images/marketing-tools/icons8-slack-new.png' },
+    { name: 'ChatGPT', src: '/images/marketing-tools/icons8-chatgpt.svg' },
     { name: 'n8n', src: '/images/marketing-tools/n8n.png' }, // Essential automation tool
     { name: 'Google Drive', src: '/images/marketing-tools/google-drive.png' },
     { name: 'Google Docs', src: '/images/marketing-tools/google-docs.png' },
-    { name: 'Airtable', src: '/images/marketing-tools/airtable.png' },
+    { name: 'Airtable', src: '/images/marketing-tools/icons8-airtable.png' },
     { name: 'Gamma.app', src: '/images/marketing-tools/gamma.png' },
     { name: 'YouTube', src: '/images/marketing-tools/youtube.png' },
     // Add more tools you use!
