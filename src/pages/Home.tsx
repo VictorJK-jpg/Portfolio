@@ -165,37 +165,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Website Walkthrough / Welcome Video Section (Updated) */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto text-center">
-          <AnimatedSection>
-            <div className="bg-slate-100 rounded-xl p-8 border border-gray-200 overflow-hidden dark:bg-gray-800 dark:border-gray-700">
-              <div className="text-slate-900 dark:text-white text-2xl font-bold mb-6">
-                
-              </div>
-              <p className="text-slate-700 dark:text-gray-200 mb-8 max-w-2xl mx-auto">
-              </p>
-
-              {/* Video Embed */}
-              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}> {/* 16:9 Aspect Ratio */}
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-                  src="https://www.loom.com/embed/YOUR_LOOM_VIDEO_ID" // <--- REPLACE THIS WITH YOUR VIDEO EMBED URL
-                  title="Website Walkthrough"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-
-              <p className="text-slate-600 dark:text-gray-300 mt-8">
-                Ready to dive deeper? <a href="/contact" className="text-blue-600 hover:underline dark:text-blue-400">Book a discovery call</a> to discuss your specific needs.
-              </p>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* Fast and Scalable Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
