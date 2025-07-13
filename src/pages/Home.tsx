@@ -3,6 +3,7 @@ import { Target, Zap, TrendingUp, Check, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import FeatureCard from '@/components/FeatureCard';
 import AnimatedSection from '@/components/AnimatedSection';
+import Portfolio from './Portfolio';
 
 const Home = () => {
   const scrollToContact = () => {
@@ -155,9 +156,11 @@ const Home = () => {
                   ))}
                 </div>
                 <div className="mt-8 text-center">
+                  <a href="/portfolio" className="inline-block">
                   <Button variant="outline" className="text-slate-900 border-slate-300 hover:bg-slate-50 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700">
                     View Case Studies
                   </Button>
+                  </a>
                 </div>
               </div>
             </AnimatedSection>
@@ -328,9 +331,11 @@ const Home = () => {
                 ))}
               </div>
               <div className="mt-8">
+                <a href= '/portfolio' className="inline-block">
                 <Button variant="outline" className="text-slate-900 border-slate-300 hover:bg-slate-50 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700">
                   View Case Studies
                 </Button>
+                </a>
               </div>
             </div>
           </AnimatedSection>
