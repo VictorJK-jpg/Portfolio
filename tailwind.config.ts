@@ -91,7 +91,7 @@ const config: Config = {
 				"accordion-up": "accordion-up 0.2s ease-out",
 			},
 			fontFamily: {
-				sans: ['"Plus Jakarta Sans"', "Arial", "sans-serif"],
+				sans: ["Outfit", "Arial", "sans-serif"],
 			},
 		},
 	},
