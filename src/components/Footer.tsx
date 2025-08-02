@@ -44,7 +44,7 @@ const Footer = () => {
             <li><a href="/home" className="text-slate-300 hover:text-white transition-colors duration-200">Made with 💚 In London, UK</a></li>
             {/* Social Media Links (replace with actual icons/links) */}
             <li className="flex gap-4 mt-4 justify-center md:justify-start">
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors duration-200">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/victor-seda-41145b371/" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors duration-200">LinkedIn</a>
               <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors duration-200">Twitter</a>
               {/* Add more social links as needed */}
             </li>
