@@ -129,7 +129,7 @@ const Toolkit = () => {
                   Ready to Checkout the Raw Workflow?
                 </h3>
                 <p className="text-lg text-slate-700 dark:text-gray-300 mb-6">
-                  Download the n8n JSON file to see the full logic and structure. Warning: This is a complex blueprint, not a simple plugin.
+                  Download the n8n JSON file to see the full logic and structure. This is a complex blueprint, not a simple plugin.
                 </p>
                 <a
                   href="https://victorseda.xyz/" /*https://drive.google.com/file/d/1tvwyrTDH5GU4t0LA-HpU3HphfTabwQoh/view?usp=sharing" Remove the last character to get the link back*/
@@ -146,7 +146,7 @@ const Toolkit = () => {
                   Need This AI Content Engine Set Up for Your Business?
                 </h3>
                 <p className="text-lg text-slate-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Implementing this powerful system requires deep expertise in n8n, AI integrations, and workflow optimization. I can package and customize this entire engine for your specific agency or brand, ensuring it runs flawlessly and delivers consistent results.
+                  Implementing this system requires deep expertise in n8n, AI integrations, and workflow optimization. I can package and customize this entire engine for your specific agency or brand, ensuring it runs flawlessly and delivers consistent results.
                 </p>
                 <Link
                   to="/contact"
@@ -185,7 +185,7 @@ const Toolkit = () => {
                   Want This High-Converting Flow Implemented for You?
                 </h3>
                 <p className="text-lg text-slate-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                  From strategic planning and compelling copywriting to seamless integration with your email platform, I can build and optimize this entire welcome flow specifically for your audience and goals.
+                  Whatever your marketing needs are, I can build and optimize this entire welcome flow specifically for your audience and goals.
                 </p>
                 <Link
                   to="/contact"
@@ -204,7 +204,7 @@ const Toolkit = () => {
                 LinkedIn Inbound Funnel & Outreach Templates
               </h2>
               <p className="text-lg text-slate-700 dark:text-gray-300 mb-8 text-center max-w-2xl mx-auto">
-                A comprehensive Notion-based system for generating inbound leads from LinkedIn, complete with high-response outreach templates.
+                A comprehensive Notion-based system for generating inbound leads from LinkedIn, complete with outreach templates.
               </p>
               <div className="text-center mt-10">
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
@@ -234,7 +234,7 @@ const Toolkit = () => {
                   Want This Funnel Customized & Integrated for Your Business?
                 </h3>
                 <p className="text-lg text-slate-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                  I can tailor this LinkedIn strategy and funnel to your specific target audience, refine the messaging for maximum response, and integrate it seamlessly into your existing sales process.
+                  I can tailor this LinkedIn strategy and funnel to your specific target audience, refine the messaging for maximum response, and integrate it easily into your existing sales process.
                 </p>
                 <Link
                   to="/contact"
@@ -348,7 +348,7 @@ const Toolkit = () => {
           <AnimatedSection delay={600}> {/* Adjusted delay */}
             <div className="bg-slate-900 text-white rounded-xl p-8 md:p-12 text-center dark:bg-gray-700">
               <h2 className="text-3xl sm:text-4xl font-bold mb-6 dark:text-white">
-                Ready to Implement These for Your Business?
+                Ready to Implement These In Your Business?
               </h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto dark:text-gray-200">
                 These blueprints are powerful, but their true value is unlocked through expert implementation and customization. If you're serious about leveraging advanced AI and automation to drive your marketing, let's talk.
