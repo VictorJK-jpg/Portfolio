@@ -74,7 +74,7 @@ const Toolkit = () => {
               My AI & Automation Playbook
             </h1>
             <p className="text-xl text-slate-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              This is where I share the powerful, raw AI and automation workflows I've built and gathered. These aren't plug-and-play apps; they're the **blueprints of systems designed for serious growth**. Explore what's possible, and if you're ready to implement them for your business, I'm here to help you unlock their full potential.
+              This is where I share the powerful, raw AI and automation workflows I've built and gathered. These aren't plug-and-play apps; they're the blueprints of systems designed for serious growth. Explore what's possible, and if you're ready to implement them for your business, I'm here to help you unlock their full potential.
             </p>
           </div>
         </AnimatedSection>

@@ -186,7 +186,7 @@ const Home = () => {
                   <span className="text-white text-2xl">🚀</span>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Systemized to scale</h3>
-                <p className="text-slate-600 dark:text-gray-300">Your marketing runs without your daily input — from 1 client to 10,000.</p>
+                <p className="text-slate-600 dark:text-gray-300">Your marketing runs without your daily input from 1 client to 10,000.</p>
               </div>
             </AnimatedSection>
 
