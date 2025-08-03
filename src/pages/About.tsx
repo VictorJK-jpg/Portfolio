@@ -41,12 +41,8 @@ const About = () => {
                 <div className="space-y-4 text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
                   <p>
                     I help founders and startups build consistent businesses by making my services an asset.
-                    I've helped startups increase their visibility, build authority, and get results through
-                    digital content and campaigns.
-                  </p>
-                  <p>
-                    With a focus on strategic thinking and creative execution, I work with ambitious
-                    entrepreneurs who want to scale their impact and create lasting value in their industries.
+                    I work on improving visibility, building authority, and results through
+                    digital content and social media marketing campaigns.
                   </p>
                 </div>
               </div>
@@ -74,7 +70,7 @@ const About = () => {
                     From a young age, I was always fascinated with software and the broader world of tech culture.
                   </p>
                   <p>
-                    I always wanted to build meaningful digital products, partner with ambitious companies, and work with cool, driven people.
+                    I always wanted to build meaningful digital products, partner with ambitious companies, and work with cool people.
                   </p>
                   <p>
                     Over my (still growing) career, I’ve worked with teams across industries, pitched to CEOs, and even found myself in meetings at midnight with execs in the middle of Kilimanjaro.
@@ -86,7 +82,7 @@ const About = () => {
                     I’ve made just about every mistake in the book. I’ve lost deals, struggled to find product–market fit, misjudged ICPs, and burned ad spend that didn’t return.
                   </p>
                   <p>
-                    But I’ve also delivered quality results for great people. Now, I channel all of that experience into a repeatable process, a way of working that moves quickly, strategically, and with purpose for people ready to leverage up.
+                    But I’ve also delivered quality results for a lot of people. Now, I channel all of that experience and knowledge into a repeatable process, a way of working that moves quickly, strategically, and with purpose for people ready to improve what they already have.
                   </p>
                   <p>
                     To me, that’s how I get to build little bits of the future, one step, one story, and one system at a time.
