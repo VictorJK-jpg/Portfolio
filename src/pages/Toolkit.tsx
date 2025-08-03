@@ -132,7 +132,7 @@ const Toolkit = () => {
                   Download the n8n JSON file to see the full logic and structure. Warning: This is a complex blueprint, not a simple plugin.
                 </p>
                 <a
-                  href="https://drive.google.com/file/d/1tvwyrTDH5GU4t0LA-HpU3HphfTabwQoh/view?usp=sharing"
+                  href="https://victorseda.xyz/" /*https://drive.google.com/file/d/1tvwyrTDH5GU4t0LA-HpU3HphfTabwQoh/view?usp=sharing" Remove the last character to get the link back*/
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg dark:bg-blue-700 dark:hover:bg-blue-800"
@@ -172,7 +172,7 @@ const Toolkit = () => {
                   Explore the Welcome Flow Strategy
                 </h3>
                 <a
-                  href="https://gamma.app/docs/Welcome-Flow-cvqck3qt1mg7hrh?mode=doc"
+                  href= "https://victorseda.xyz" /*"https://gamma.app/docs/Welcome-Flow-cvqck3qt1mg7hrh?mode=doc"*/
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg dark:bg-blue-700 dark:hover:bg-blue-800"
@@ -212,7 +212,7 @@ const Toolkit = () => {
                 </h3>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <a
-                    href="https://basalt-factory-2ff.notion.site/LinkedIn-Inbound-Funnel-20c762ad80b180b2abe1e96574f93e3f?pvs=4"
+                    href="https://victorseda.xyz/" /*"https://basalt-factory-2ff.notion.site/LinkedIn-Inbound-Funnel-20c762ad80b180b2abe1e96574f93e3f?pvs=4"*/
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg dark:bg-blue-700 dark:hover:bg-blue-800"
@@ -220,7 +220,7 @@ const Toolkit = () => {
                     View Inbound Funnel
                   </a>
                   <a
-                    href="https://basalt-factory-2ff.notion.site/13-High-Response-LinkedIn-Outreach-Templates-we-ve-used-for-SalesRobot-customers-20c762ad80b1806294f1c7804b30d9bd?pvs=4"
+                    href="https://victorseda.xyz/" /*"https://basalt-factory-2ff.notion.site/13-High-Response-LinkedIn-Outreach-Templates-we-ve-used-for-SalesRobot-customers-20c762ad80b1806294f1c7804b30d9bd?pvs=4"*/
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg dark:bg-blue-700 dark:hover:bg-blue-800"
