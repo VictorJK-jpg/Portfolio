@@ -373,7 +373,7 @@ const Home = () => {
               Ready to Build a System That Actually Fills Your Pipeline?
             </h2>
             <p className="text-xl text-slate-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              If you're a B2B company ready to scale acquisition with marketing automation, let's talk. I'll audit your current funnel and show you where the gaps are.
+              If you're a B2B company ready to scale acquisition with marketing automation, let's talk. I'll audit your current funnel and give you my opinion.
             </p>
             <p className="text-lg text-slate-600 dark:text-gray-300 mb-8">
               I take on a limited number of projects each month to keep quality high. Schedule a discovery call below:
