@@ -71,7 +71,7 @@ const Toolkit = () => {
         <AnimatedSection>
           <div className="text-center mb-16">
             <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-              My AI & Automation Playbook
+              Systems I Use for Clients
             </h1>
             <p className="text-xl text-slate-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               This is where I share the powerful, raw AI and automation workflows I've built and gathered. These aren't plug-and-play apps; they're the blueprints of systems designed for serious growth. Explore what's possible, and if you're ready to implement them for your business, I'm here to help you unlock their full potential.
@@ -165,7 +165,7 @@ const Toolkit = () => {
                 Email Welcome Flow Blueprint
               </h2>
               <p className="text-lg text-slate-700 dark:text-gray-300 mb-8 text-center max-w-2xl mx-auto">
-                A detailed blueprint for crafting high-converting email welcome sequences. Understand the strategy, content, and flow that turns new subscribers into engaged leads.
+                A detailed blueprint for crafting high-converting email welcome sequences. Most B2B companies waste their welcome sequence on generic 'thanks for signing up' emails. This system qualifies leads, educates them on use cases, and pushes them toward a demo.
               </p>
               <div className="text-center mt-10">
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
@@ -351,7 +351,7 @@ const Toolkit = () => {
                 Ready to Implement These In Your Business?
               </h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto dark:text-gray-200">
-                These blueprints are powerful, but their true value is unlocked through expert implementation and customization. If you're serious about leveraging advanced AI and automation to drive your marketing, let's talk.
+                These blueprints are powerful, but their true value is unlocked through expert implementation and customization. If you're serious about leveraging advanced AI and automation in your processes, let's talk.
               </p>
               <Link
                 to="/contact"

@@ -29,9 +29,9 @@ const Home = () => {
   ];
 
   const whatIDoItems = [
-    "I'll design your content + inbound strategy",
-    "I'll build your system (funnels, content, traffic setup)",
-    "I'll test and adjust until it's working",
+    "I'll build automated email sequences that warm leads before sales touches them",
+    "I'll design conversion funnels that qualify prospects and book demos automatically",
+    "I'll set up lead scoring and nurturing systems so your team focuses on ready-to-buy prospects",
     "I'll get you live and growing — in 5 weeks"
   ];
 
@@ -117,17 +117,17 @@ const Home = () => {
         <div className="max-w-7xl mx-auto text-center">
           <AnimatedSection>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
-              Your marketing system, without the babysitting.
+              B2B Marketing Automation that Turns Cold Leads into Sales Conversations
             </h1>
             <p className="text-xl sm:text-2xl text-slate-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              You focus on your product, I'll launch the content system, traffic and inbound in 5 weeks, guaranteed.
+              I help SaaS and tech companies build campaign sequences, lead nurturing systems, and funnels that actually fill your pipeline, without adding headcount.
             </p>
             <Button
               onClick={scrollToContact}
               size="lg"
               className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 hover:shadow-lg dark:bg-blue-600 dark:hover:bg-blue-700"
             >
-              Let's Talk
+              Book a Strategy Call
             </Button>
           </AnimatedSection>
         </div>
@@ -174,7 +174,7 @@ const Home = () => {
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-                Hands-off growth, from day one.
+                Systems that scale without effort.
               </h2>
             </div>
           </AnimatedSection>
@@ -185,7 +185,7 @@ const Home = () => {
                 <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
                   <span className="text-white text-2xl">🚀</span>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Systemized to scale</h3>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Done-for-you automation</h3>
                 <p className="text-slate-600 dark:text-gray-300">Your marketing runs without your daily input from 1 client to 10,000.</p>
               </div>
             </AnimatedSection>
@@ -209,10 +209,20 @@ const Home = () => {
                 <p className="text-slate-600 dark:text-gray-300">You stay focused on your product, not daily LinkedIn posts or blog edits.</p>
               </div>
             </AnimatedSection>
+
+            <AnimatedSection delay={400}>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
+                  <span className="text-white text-2xl">📝</span>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Strategic campaign management</h3>
+                <p className="text-slate-600 dark:text-gray-300"> I run and optimize your acquisition channels.</p>
+              </div>
+            </AnimatedSection>
           </div>
 
           <div className="text-center mt-12">
-            <AnimatedSection delay={400}>
+            <AnimatedSection delay={500}>
               <Button
                 onClick={scrollToContact}
                 size="lg"

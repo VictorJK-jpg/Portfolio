@@ -12,9 +12,9 @@ const About = () => {
             <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6">
               Who am I?
             </h1>
-            <p className="text-xl text-slate-600 dark:text-gray-300 max-w-2xl mx-auto">
+            {/* <p className="text-xl text-slate-600 dark:text-gray-300 max-w-2xl mx-auto">
               Building the future of digital content and business growth
-            </p>
+            </p> */}
           </AnimatedSection>
         </div>
       </section>
@@ -40,9 +40,7 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
                   <p>
-                    I help founders and startups build consistent businesses by making my services an asset.
-                    I work on improving visibility, building authority, and results through
-                    digital content and social media marketing campaigns.
+                  I help B2B SaaS and tech companies build marketing systems that turn traffic into pipeline.
                   </p>
                 </div>
               </div>
@@ -67,26 +65,32 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
                   <p>
-                    From a young age, I was always fascinated with software and the broader world of tech culture.
+                    I spent 2 years as Lead Digital Marketing Specialist at UNITE & Adsome, where I managed acquisition campaigns, built client funnels, and ran the marketing systems that kept the agency growing.
                   </p>
-                  <p>
+                  {/* <p>
                     I always wanted to build meaningful digital products, partner with ambitious companies, and work with cool people.
-                  </p>
+                  </p> */}
                   <p>
                     Over my (still growing) career, I’ve worked with teams across industries, pitched to CEOs, and even found myself in meetings at midnight with execs in the middle of Kilimanjaro.
                   </p>
                   <p>
-                    I’ve consulted for a few startups locally and helped build some powerful AI tools, mostly behind the scenes, and often under the radar.
+                    I’ve also consulted for a few startups locally and helped build some powerful AI tools, mostly behind the scenes, and often under the radar.
                   </p>
                   <p>
                     I’ve made just about every mistake in the book. I’ve lost deals, struggled to find product–market fit, misjudged ICPs, and burned ad spend that didn’t return.
                   </p>
                   <p>
-                    But I’ve also delivered quality results for a lot of people. Now, I channel all of that experience and knowledge into a repeatable process, a way of working that moves quickly, strategically, and with purpose for people ready to improve what they already have.
+                    In all, I kept seeing the same problem: Companies have great products, decent traffic, but their lead nurturing is either nonexistent or a mess of random emails. 
                   </p>
                   <p>
-                    To me, that’s how I get to build little bits of the future, one step, one story, and one system at a time.
+                    Now, I focus exclusively on the systems that matter: sequences, funnel optimization, and automation that moves prospects from "interested" to "ready to buy."
                   </p>
+                  <p>
+                    But I’ve also delivered quality results for a lot of people. I channel all of that experience and knowledge into a repeatable process, a way of working that moves quickly, strategically, and with purpose for people ready to improve what they already have.
+                  </p>
+                  {/* <p>
+                    To me, that’s how I get to build little bits of the future, one step, one story, and one system at a time.
+                  </p> */}
                 </div>
               </div>
             </AnimatedSection>
@@ -102,8 +106,9 @@ const About = () => {
               My Philosophy
             </h2>
             <blockquote className="text-2xl sm:text-3xl text-slate-700 dark:text-gray-200 font-medium italic leading-relaxed mb-8">
-              "Your intuition knows what to write, so get out of the way."
-            </blockquote>
+      I don't do fluff. I build systems, test campaigns, and optimize for one thing: pipeline contribution.
+
+      If you're a B2B company doing $100,000-$500,000 in revenue and you're ready to make a move without hiring a full team, let's talk.            </blockquote>
             <cite className="text-slate-500 dark:text-gray-400 text-lg">— Ray Bradbury</cite>
           </AnimatedSection>
         </div>
@@ -114,10 +119,10 @@ const About = () => {
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-              Ready to Build Something Great?
+              Have any Questions?
             </h2>
             <p className="text-xl text-slate-600 dark:text-gray-300 mb-8">
-              Let's work together to turn your vision into reality.
+              Let's get on a call and address any concerns you have.
             </p>
             <div className="space-x-4">
               <Button asChild size="lg" className="bg-slate-900 hover:bg-slate-800 dark:bg-blue-600 dark:hover:bg-blue-700">
