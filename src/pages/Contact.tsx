@@ -39,7 +39,7 @@ const Contact = () => {
               Contact
             </h1>
             <p className="text-xl text-slate-600 dark:text-gray-300"> {/* Added dark mode */}
-              Get in touch to start something great
+              Get in touch
             </p>
           </AnimatedSection>
         </div>

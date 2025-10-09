@@ -10,104 +10,93 @@ const Home = () => {
     window.location.href = '/contact';
   };
 
-  const features = [
-    {
-      icon: Target,
-      title: 'Strategic Content Creation',
-      description: 'Develop compelling content strategies that resonate with your audience and drive meaningful engagement across all digital platforms.'
-    },
-    {
-      icon: Zap,
-      title: 'Digital Marketing Solutions',
-      description: 'Boost your online presence with data-driven marketing campaigns designed to increase visibility and generate qualified leads.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Business Growth Consulting',
-      description: 'Scale your startup with proven frameworks and strategies that transform ideas into sustainable, profitable businesses.'
-    }
-  ];
-
   const whatIDoItems = [
-    "I'll build automated email sequences that warm leads before sales touches them",
-    "I'll design conversion funnels that qualify prospects and book demos automatically",
-    "I'll set up lead scoring and nurturing systems so your team focuses on ready-to-buy prospects",
-    "I'll get you live and growing — in 5 weeks"
+    "Build automated email sequences that warm leads before sales touches them",
+    "Design conversion funnels that qualify prospects and book demos automatically",
+    "Set up lead scoring and nurturing systems so your team focuses on ready-to-buy prospects",
+    "Optimize your entire acquisition funnel from ad click to closed deal"
   ];
 
   const whatYouGetItems = [
-    "A complete inbound system — planned, built, and tested",
-    "Organic traffic from search and social, starting in 5 weeks",
-    "Content that builds authority and drives leads — no micromanaging needed",
-    "Systems, templates, and automations handed over, ready to scale"
+    "Done-for-you marketing automation—email sequences, lead scoring, funnel tracking",
+    "Campaign management across paid channels (Google, LinkedIn, Meta)",
+    "Systems and workflows you own—handed over ready to scale",
+    "Ongoing optimization focused on one metric: pipeline contribution"
   ];
 
   const whatThisIsntItems = [
-    "Not a content course or DIY system",
-    "Not \"ghostwriting\" that just fills your feed",
-    "Not a random VA or freelancer guessing what works",
-    "Not for the curious — I only work with people serious about building traction"
+    "Not a content agency or brand/creative work",
+    "Not for early-stage startups under $500K revenue",
+    "Not monthly retainers with vague deliverables",
+    "Not for companies looking for 'brand awareness'—I focus on pipeline"
   ];
 
-  const clientMetrics = [
-    'Launch SEO content hubs that grow search traffic from 0 to 20K/month',
-    'Build brand visibility from scratch with systemized social posts',
-    'Automate inbound lead pipelines from search and social',
-    'Turn quiet products into loud ones — without ads or cold pitching'
+  const processSteps = [
+    {
+      title: 'Discovery & Funnel Audit',
+      description: 'I analyze your current funnel, traffic sources, and conversion points to find the biggest gaps. This usually takes 1-2 weeks.',
+      emoji: '🔍'
+    },
+    {
+      title: 'Build & Implement',
+      description: 'I build the systems—email sequences, landing pages, automation flows, tracking setup. You review and approve, I handle execution.',
+      emoji: '⚙️'
+    },
+    {
+      title: 'Test & Optimize',
+      description: 'We launch, measure what works, kill what doesn\'t, and scale the winners. Ongoing optimization focused on pipeline contribution.',
+      emoji: '📈'
+    }
   ];
 
-  const systemFeatures = [
+  const credibilityPoints = [
     {
-      title: 'Content systemized',
-      description: 'Whether it\'s 1 article per week or daily LinkedIn posts — it\'s all setup to run without constant writing.'
+      title: 'I\'ve Done This at Scale',
+      description: 'I was Lead Digital Marketing Specialist at a video production agency, where I built and managed acquisition systems that brought in consistent B2B clients month over month. I know how this works.'
     },
     {
-      title: 'SEO-first',
-      description: 'You\'ll rank. You\'ll stay ranked. I build for compounding search growth, not content churn.'
+      title: 'I Build My Own Tools',
+      description: 'I don\'t just talk about automation—I built my own cold email infrastructure from scratch (AWS, Resend, custom backend). If you need someone who can actually implement technical marketing systems, that\'s me.'
     },
     {
-      title: 'Automated and No-Code Friendly',
-      description: 'I use Notion, Airtable, Docs, and other tools you already understand. Hand-off ready.'
-    },
-    {
-      title: 'Custom-fit',
-      description: 'No generic templates because your system fits your offer and voice. That\'s why it works.'
+      title: 'I Only Do B2B',
+      description: 'I\'m not an agency that does everything for everyone. I focus exclusively on B2B marketing automation because that\'s where I deliver the most impact. If you need someone who understands long sales cycles and pipeline metrics, you\'re in the right place.'
     }
   ];
 
   const faqs = [
     {
-      question: 'Can this work even if we don\'t have content yet?',
-      answer: 'Yes, I\'ll help define your topics, messaging, and build the first batches.'
+      question: 'How much does this cost?',
+      answer: 'It depends on scope, but most clients invest $3-7K/month for done-for-you marketing automation and campaign management. I can give you exact pricing after we talk about your goals.'
     },
     {
-      question: 'Do you handle SEO too?',
-      answer: 'Absolutely. Keyword research, formatting, and optimization are baked into the system.'
+      question: 'Do you work with early-stage startups?',
+      answer: 'If you\'re pre-product-market fit or doing less than $500K in revenue, I\'m probably not the right fit yet. You need to validate your offer and messaging first before investing in automation.'
     },
     {
-      question: 'Can we scale content after the first launch?',
-      answer: 'Yes, your system will be designed to grow with your bandwidth or team.'
+      question: 'How long until we see results?',
+      answer: 'Setup takes 2-4 weeks. You\'ll start seeing data within 30 days. Meaningful pipeline impact usually shows up around 60-90 days once we have enough data to optimize.'
     },
     {
-      question: 'Do you help with social media?',
-      answer: 'Yes, especially LinkedIn and YouTube. I build a consistent process that builds your authority and attracts leads.'
+      question: 'Do you run ads or just automation?',
+      answer: 'Both. I can manage paid acquisition (Google, LinkedIn, Meta) and build the automation systems that nurture those leads into demos. The goal is always full-funnel optimization.'
     },
     {
-      question: 'Do we own the system after?',
-      answer: 'Yes, you get everything: strategy, system, assets, and documentation.'
+      question: 'What if I already have a marketing team?',
+      answer: 'I often work alongside internal teams to build the systems they don\'t have bandwidth for—email automation, funnel optimization, technical implementation. If that\'s your situation, we can make it work.'
     },
     {
       question: 'Where are you based?',
-      answer: 'I operate remotely. My primary timezone is GMT+1.'
+      answer: 'I operate remotely. My primary timezone is GMT+1, but I work with clients across US and EU time zones.'
     },
     {
-      question: 'Can we pay for our project in installments?',
-      answer: 'We can discuss installment options during our discovery call to find a solution that works for your budget.'
+      question: 'Can we pay in installments?',
+      answer: 'Yes, we can structure payment terms during our discovery call to find what works for your budget.'
     },
     {
-      question: 'Will we own the project?',
-      answer: 'Absolutely. Upon completion and full payment, you will have full ownership of all strategies, content, systems, and assets developed for your project. I provide all necessary documentation and handover materials.'
-    },
+      question: 'Do we own everything after the project?',
+      answer: 'Absolutely. Upon completion, you have full ownership of all strategies, automation flows, campaign assets, and documentation. Everything is handed over ready to scale.'
+    }
   ];
 
   return (
@@ -117,10 +106,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto text-center">
           <AnimatedSection>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
-              B2B Marketing Automation that Turns Cold Leads into Sales Conversations
+              B2B Marketing Automation That Actually Fills Your Pipeline
             </h1>
             <p className="text-xl sm:text-2xl text-slate-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              I help SaaS and tech companies build campaign sequences, lead nurturing systems, and funnels that actually fill your pipeline, without adding headcount.
+              I help SaaS and tech companies build email sequences, lead nurturing systems, and conversion funnels that turn cold traffic into qualified sales conversations—without adding headcount.
             </p>
             <Button
               onClick={scrollToContact}
@@ -133,19 +122,73 @@ const Home = () => {
         </div>
       </section>
 
-      {/* What Will I Do Section */}
+      {/* Problem Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection>
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+                You're Getting Traffic. But Where Are the Demos?
+              </h2>
+              <p className="text-xl text-slate-600 dark:text-gray-300 mb-8 leading-relaxed">
+                Most B2B companies have the same problem: decent website traffic, some inbound leads, maybe even paid campaigns running. But the leads just sit there. Your sales team is chasing cold prospects. Your nurture emails are generic. And you're losing deals to competitors who stayed top-of-mind while you went silent.
+              </p>
+              <p className="text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
+                The gap isn't your product or your pricing. It's the system between "interested visitor" and "ready to buy."
+              </p>
+              <p className="text-lg font-semibold text-slate-900 dark:text-white mt-6">
+                That's what I build.
+              </p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* What I Do Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-                What will I do?
+                How I Help B2B Companies Scale Pipeline
               </h2>
             </div>
           </AnimatedSection>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+            <AnimatedSection delay={100}>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
+                  <span className="text-white text-2xl">✉️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Email Sequences That Actually Nurture</h3>
+                <p className="text-slate-600 dark:text-gray-300">I build automated email flows that educate prospects, address objections, and push them toward demos—so your sales team only talks to people who are ready.</p>
+              </div>
+            </AnimatedSection>
+
             <AnimatedSection delay={200}>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
+                  <span className="text-white text-2xl">🎯</span>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Conversion Funnels That Qualify Leads</h3>
+                <p className="text-slate-600 dark:text-gray-300">From first click to booked demo, I design funnels that filter out tire-kickers and surface high-intent prospects automatically.</p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={300}>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
+                  <span className="text-white text-2xl">📊</span>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Marketing Systems That Scale</h3>
+                <p className="text-slate-600 dark:text-gray-300">I set up the infrastructure (lead scoring, segmentation, retargeting) so your acquisition doesn't break when you 2x your ad spend.</p>
+              </div>
+            </AnimatedSection>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <AnimatedSection delay={400}>
               <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm dark:bg-gray-900 dark:border-gray-700 dark:shadow-lg">
                 <div className="space-y-4">
                   {whatIDoItems.map((item, index) => (
@@ -155,81 +198,127 @@ const Home = () => {
                     </div>
                   ))}
                 </div>
-                <div className="mt-8 text-center">
-                  <a href="/portfolio" className="inline-block">
-                  <Button variant="outline" className="text-slate-900 border-slate-300 hover:bg-slate-50 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700">
-                    View Case Studies
-                  </Button>
-                  </a>
-                </div>
               </div>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Fast and Scalable Section */}
+      {/* Who This Is For Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection>
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+                Who I Work With
+              </h2>
+              <p className="text-xl text-slate-600 dark:text-gray-300 mb-8">
+                I work with B2B SaaS and tech companies doing $500K-$5M in revenue who have one or more of these problems:
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={200}>
+            <div className="max-w-4xl mx-auto space-y-4 mb-12">
+              <div className="flex items-start space-x-3">
+                <span className="text-slate-900 dark:text-white mt-1">•</span>
+                <p className="text-lg text-slate-700 dark:text-gray-200">You're getting traffic but conversion rates are terrible</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-slate-900 dark:text-white mt-1">•</span>
+                <p className="text-lg text-slate-700 dark:text-gray-200">Your sales team wastes time on unqualified leads</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-slate-900 dark:text-white mt-1">•</span>
+                <p className="text-lg text-slate-700 dark:text-gray-200">You're running ads but can't track them back to closed deals</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-slate-900 dark:text-white mt-1">•</span>
+                <p className="text-lg text-slate-700 dark:text-gray-200">Your email nurture is a mess (or doesn't exist)</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-slate-900 dark:text-white mt-1">•</span>
+                <p className="text-lg text-slate-700 dark:text-gray-200">You need marketing systems but can't afford a full team</p>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={300}>
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-slate-600 dark:text-gray-300 italic">
+                If you're earlier stage, heavily enterprise-focused with 18+ month sales cycles, or looking for brand/creative work, I'm not the right fit.
+              </p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-                Systems that scale without effort.
+                How We Work Together
               </h2>
             </div>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <AnimatedSection delay={100}>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
-                  <span className="text-white text-2xl">🚀</span>
+            {processSteps.map((step, index) => (
+              <AnimatedSection key={step.title} delay={index * 100}>
+                <div className="text-center">
+                  <div className="text-5xl mb-4">{step.emoji}</div>
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">{step.title}</h3>
+                  <p className="text-slate-600 dark:text-gray-300">{step.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Done-for-you automation</h3>
-                <p className="text-slate-600 dark:text-gray-300">Your marketing runs without your daily input from 1 client to 10,000.</p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
-                  <span className="text-white text-2xl">📈</span>
-                </div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">No-code, high-leverage setup</h3>
-                <p className="text-slate-600 dark:text-gray-300">Built with tools like Notion, Webflow, and AI — automated where it counts.</p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={300}>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
-                  <span className="text-white text-2xl">🔒</span>
-                </div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Zero babysitting required</h3>
-                <p className="text-slate-600 dark:text-gray-300">You stay focused on your product, not daily LinkedIn posts or blog edits.</p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={400}>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
-                  <span className="text-white text-2xl">📝</span>
-                </div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Strategic campaign management</h3>
-                <p className="text-slate-600 dark:text-gray-300"> I run and optimize your acquisition channels.</p>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            ))}
           </div>
 
           <div className="text-center mt-12">
-            <AnimatedSection delay={500}>
+            <AnimatedSection delay={400}>
               <Button
                 onClick={scrollToContact}
                 size="lg"
                 className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 text-lg font-medium rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700"
               >
-                Book a Call
+                See If We're a Fit
               </Button>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Credibility Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+                Why Work With Me?
+              </h2>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {credibilityPoints.map((point, index) => (
+              <AnimatedSection key={point.title} delay={index * 100}>
+                <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm dark:bg-gray-900 dark:border-gray-700 dark:shadow-lg">
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">{point.title}</h3>
+                  <p className="text-slate-600 dark:text-gray-300">{point.description}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <AnimatedSection delay={400}>
+              <a href="/portfolio" className="inline-block">
+                <Button variant="outline" className="text-slate-900 border-slate-300 hover:bg-slate-50 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700">
+                  View My Work
+                </Button>
+              </a>
             </AnimatedSection>
           </div>
         </div>
@@ -243,10 +332,10 @@ const Home = () => {
             <AnimatedSection>
               <div className="bg-green-50 rounded-xl p-8 border border-green-200 dark:bg-green-900 dark:border-green-700">
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
-                  <span className="mr-3">🧾</span> What you get
+                  <span className="mr-3">✅</span> What You Get
                 </h3>
                 <div className="space-y-4">
-                  {whatYouGetItems.map((item, index ) => (
+                  {whatYouGetItems.map((item, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
                       <p className="text-slate-700 dark:text-gray-200">{item}</p>
@@ -260,7 +349,7 @@ const Home = () => {
             <AnimatedSection delay={200}>
               <div className="bg-red-50 rounded-xl p-8 border border-red-200 dark:bg-red-900 dark:border-red-700">
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
-                  <span className="mr-3">🚫</span> What this isn't
+                  <span className="mr-3">❌</span> What This Isn't
                 </h3>
                 <div className="space-y-4">
                   {whatThisIsntItems.map((item, index) => (
@@ -276,19 +365,24 @@ const Home = () => {
         </div>
       </section>
 
-       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+      {/* Book a Call Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-12">
-            Book a Call
-          </h2>
-            <p className="text-lg text-slate-600 dark:text-gray-300 mb-8">
-            I try take on a limited number of projects each month to keep quality high and timelines fast. Schedule a discovery call below that fits your calendar:
+          <AnimatedSection>
+            <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Ready to Build a System That Actually Fills Your Pipeline?
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+              If you're a B2B company ready to scale acquisition with marketing automation, let's talk. I'll audit your current funnel and show you where the gaps are.
             </p>
-            <div></div>
+            <p className="text-lg text-slate-600 dark:text-gray-300 mb-8">
+              I take on a limited number of projects each month to keep quality high. Schedule a discovery call below:
+            </p>
+          </AnimatedSection>
           <div style={{ minWidth: 320, height: 700, overflow: "hidden" }}>
             <CalComWidget
               namespace="15min"
-              calLink="victorseda/15min" // IMPORTANT: Ensure this is your correct Cal.com link
+              calLink="victorseda/15min"
               style={{ width: "100%", height: "100%", overflow: "scroll" }}
               config={{ layout: "month_view" }}
             />
@@ -296,121 +390,20 @@ const Home = () => {
         </div>
       </section>
 
-      {/* What This Is Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <AnimatedSection>
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">
-                <span className="mr-3">💡</span> What this is:
-              </h2>
-              <p className="text-xl text-slate-600 dark:text-gray-300 mb-8 leading-relaxed">
-                A inbound growth engine personalized for your business that gets you from "we need leads" to "our content brings them in weekly" that's built to last, free up your SDRs and not just go viral once.
-              </p>
-              <p className="text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
-                I've helped early products, agencies, and growing teams launch inbound systems that bring in clients without paid ads, without babysitting, and without delay.
-              </p>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Your Product My Process Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-                <span className="mr-3">🎯</span> Your product. My process.
-              </h2>
-              <p className="text-xl text-slate-600 dark:text-gray-300 max-w-3xl mx-auto">
-                You bring the product. I bring the content, systems, and visibility to grow it.
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection delay={200}>
-            <div className="text-center mb-12">
-              <p className="text-lg text-slate-600 dark:text-gray-300 mb-8">Since 2022, I've helped clients:</p>
-              <div className="max-w-4xl mx-auto space-y-4">
-                {clientMetrics.map((metric, index) => (
-                  <div key={index} className="flex items-start space-x-3 justify-center">
-                    <span className="text-slate-900 dark:text-white mt-1">→</span>
-                    <p className="text-slate-700 dark:text-gray-200 text-left">{metric}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8">
-                <a href= '/portfolio' className="inline-block">
-                <Button variant="outline" className="text-slate-900 border-slate-300 hover:bg-slate-50 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700">
-                  View Case Studies
-                </Button>
-                </a>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Systems Built to Scale */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-                <span className="mr-3">⚙️</span> With Systems Built to Scale
-              </h2>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {systemFeatures.map((feature, index) => (
-              <AnimatedSection key={feature.title} delay={index * 100}>
-                <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm dark:bg-gray-900 dark:border-gray-700 dark:shadow-lg">
-                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">{feature.title}</h3>
-                  <p className="text-slate-600 dark:text-gray-300">{feature.description}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Ready to Grow CTA */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto text-center">
-          <AnimatedSection>
-            <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">
-              <span className="mr-3"></span> Ready to grow?
-            </h2>
-            <p className="text-xl text-slate-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              It starts with a 30-minute call. Then I'll build a Blueprint for your product/service, outlining how we'll grow traffic, build authority, and bring in leads.
-            </p>
-            <Button
-              onClick={scrollToContact}
-              size="lg"
-              className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 text-lg font-medium rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700"
-            >
-              Book a Discovery Call
-            </Button>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* FAQ Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-gray-800">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">
-                <span className="mr-3"></span> Frequently Asked Questions
+                Frequently Asked Questions
               </h2>
             </div>
           </AnimatedSection>
 
           <div className="max-w-4xl mx-auto space-y-6">
             {faqs.map((faq, index) => (
-              <AnimatedSection key={faq.question} delay={index * 100}>
+              <AnimatedSection key={faq.question} delay={index * 50}>
                 <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm dark:bg-gray-900 dark:border-gray-700 dark:shadow-lg">
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">{faq.question}</h3>
                   <p className="text-slate-600 dark:text-gray-300">{faq.answer}</p>
