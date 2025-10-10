@@ -80,7 +80,7 @@ const Navigation = () => {
           <div className="flex gap-8">
             <Link to="/about" className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200">About</Link>
             <Link to="/toolkit" className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200">Toolkit</Link>
-            <Link to="/portfolio" className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200">Portfolio</Link>
+            <Link to="/portfolio" className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200">My Work</Link>
             <Link to="/contact" className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200">Contact</Link>
           </div>
         </div>
