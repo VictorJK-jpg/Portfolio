@@ -1,13 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import { Loader2 } from "lucide-react";
 
 const Contact = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "15min" });
       cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
     })();
+
+    // Observe for the iframe insertion by Cal.com
+    const observer = new MutationObserver(() => {
+      const iframe = document.querySelector('iframe[src*="cal.com"]');
+      if (iframe) {
+        setIsLoaded(true);
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -38,8 +57,20 @@ const Contact = () => {
               that fits your schedule below.
             </p>
 
-            {/* Cal Embed (auto-adjusts height) */}
-            <div className="w-full overflow-hidden">
+            {/* Loading Message */}
+            {!isLoaded && (
+              <div className="flex flex-col items-center justify-center py-10 text-slate-600 dark:text-gray-300 animate-pulse">
+                <Loader2 className="h-6 w-6 animate-spin mb-3" />
+                <p className="text-base">Loading calendar…</p>
+              </div>
+            )}
+
+            {/* Cal Embed */}
+            <div
+              className={`w-full overflow-hidden transition-opacity duration-500 ${
+                isLoaded ? "opacity-100" : "opacity-0"
+              }`}
+            >
               <Cal
                 namespace="15min"
                 calLink="victorseda/15min"
@@ -78,7 +109,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="text-slate-600 hover:text-slate-900 transition-colors dark:text-gray-300 dark:hover:text-white"
               >
-                X
+                Twitter
               </a>
             </div>
           </AnimatedSection>
