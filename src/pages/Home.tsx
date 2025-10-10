@@ -3,7 +3,7 @@ import { Target, Zap, TrendingUp, Check, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import FeatureCard from '@/components/FeatureCard';
 import AnimatedSection from '@/components/AnimatedSection';
-import Portfolio from './Portfolio';
+import Portfolio from './My Work';
 
 const Home = () => {
   const scrollToContact = () => {
@@ -109,7 +109,7 @@ const Home = () => {
               B2B Marketing Automation That Actually Fills Your Pipeline
             </h1>
             <p className="text-xl sm:text-2xl text-slate-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              I help SaaS and tech companies build email sequences, lead nurturing systems, and conversion funnels that turn cold traffic into qualified sales conversations—without adding headcount.
+              I help SaaS and tech companies build email sequences, lead nurturing systems, and conversion funnels that turn cold traffic to qualified sales conversations, without adding headcount.
             </p>
             <Button
               onClick={scrollToContact}
@@ -150,7 +150,7 @@ const Home = () => {
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-                How I Help B2B Companies Scale Pipeline
+                What I Do
               </h2>
             </div>
           </AnimatedSection>

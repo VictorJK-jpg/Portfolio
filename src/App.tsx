@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 
 // Import your page components
 import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio";
+import Portfolio from "./pages/My Work";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Toolkit from "./pages/Toolkit";

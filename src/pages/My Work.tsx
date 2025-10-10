@@ -16,7 +16,6 @@ const Portfolio = () => {
     { name: 'n8n', src: '/images/marketing-tools/N8n.io_logo.svg' },
     { name: 'Klaviyo', src: '/images/marketing-tools/Klaviyo_logo.svg' },
     { name: 'Airtable', src: '/images/marketing-tools/icons8-airtable-50.svg' },
-    { name: 'HubSpot', src: '/images/marketing-tools/hubspot-logo.svg' },
     { name: 'Apollo.io', src: '/images/marketing-tools/apollo-logo.svg' },
   ];
 
@@ -74,7 +73,7 @@ const Portfolio = () => {
               My Work
             </h1>
             <p className="text-xl sm:text-2xl text-slate-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              I build B2B marketing systems—email automation, lead nurturing, and conversion funnels—that turn traffic into qualified pipeline. 
+              I build B2B marketing systems for large scale business that turn traffic into qualified pipeline. 
               Here's how I've applied this approach across campaigns and clients.
             </p>
           </AnimatedSection>
@@ -104,7 +103,7 @@ const Portfolio = () => {
                   2. Email Sequences & Lead Nurturing
                 </h3>
                 <p className="text-slate-600 dark:text-gray-300">
-                  Build automated email flows, lead scoring systems, and nurture sequences that qualify prospects before sales touches them.
+                  Build automated flows, lead scoring systems, and sequences that qualify prospects before sales touches them.
                 </p>
               </div>
               <div>
@@ -112,7 +111,7 @@ const Portfolio = () => {
                   3. Campaign Management & Testing
                 </h3>
                 <p className="text-slate-600 dark:text-gray-300">
-                  Launch and manage acquisition campaigns (ads, email, content) with continuous A/B testing to find what converts best.
+                  Launch and manage acquisition campaigns (ads, email, content) with continuous testing for efficiency. 
                 </p>
               </div>
               <div>
