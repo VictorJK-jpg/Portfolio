@@ -204,7 +204,7 @@ export default function Waitlist() {
             <div className="bg-gray-800 rounded-lg p-6 mb-12">
               <h2 className="text-2xl font-bold mb-4">Early Access Benefits</h2>
               <ul className="space-y-3 text-gray-300">
-                <li>• 50% off setup fee ($1,200 instead of $3,000)</li>
+                <li>• 50% off setup fee ($1,500 instead of $3,000)</li>
                 <li>• Priority onboarding</li>
                 <li>• Direct access to my team for setup and optimization</li>
                 <li>• Input on feature development</li>
