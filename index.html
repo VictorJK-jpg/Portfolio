@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GRZ8CLFE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag( ){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <head>
+         <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GRZ8CLFE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag( ){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      gtag('config', 'G-J8GRZ8CLFE');
-    </script>
-    <!-- End Google tag (gtag.js) -->
-   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="msvalidate.01" content="B7EB28EA5D72A8DD8825A485558C7314" />
-    <title>Victor - Your Automated Marketing System</title>
-    <meta name="description" content="I help founders and startups build consistent businesses through strategic content creation and automated digital marketing strategies." />
-    <meta name="author" content="Victor" />
+      gtag('config', 'G-J8GRZ8CLFE');
+    </script>
+       <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msvalidate.01" content="B7EB28EA5D72A8DD8825A485558C7314" />
+    <title>Victor - Your Automated Marketing System</title>
+    <meta name="description" content="I help founders and startups build consistent businesses through strategic content creation and automated digital marketing strategies." />
+    <meta name="author" content="Victor" />
 
-    <meta property="og:title" content="Victor - Digital Marketing & Business Growth" />
-    <meta property="og:description" content="I help founders and startups build consistent businesses through strategic content creation and digital marketing solutions." />
-    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Victor - Digital Marketing & Business Growth" />
+    <meta property="og:description" content="I help founders and startups build consistent businesses through strategic content creation and digital marketing solutions." />
+    <meta property="og:type" content="website" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Victor - Digital Marketing & Business Growth" />
+    <link rel="icon" href="/favicon.jpg" type="image/x-icon">
+  </head>
 
-    <link rel="icon" href="/favicon.jpg" type="image/x-icon">
-  </head>
+  <body>
+    <div id="root"></div>
 
-  <body>
-    <div id="root"></div>
-    <form name="lead-magnet-form" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="text" name="company" />
+        <form name="lead-magnet-form" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="hidden" name="form-name" value="lead-magnet-form" />
+      <input type="text" name="bot-field" />     </form>
+    
+    <form name="waitlist" netlify hidden>
       <input type="email" name="email" />
-      <input type="hidden" name="form-name" value="lead-magnet-form" />
-      <input type="text" name="bot-field" /> <!-- Honeypot field for spam prevention -->
-    </form>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+      </form>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
