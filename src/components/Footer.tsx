@@ -28,7 +28,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li><Link to="/about" className="text-slate-300 hover:text-white transition-colors duration-200">About</Link></li>
             <li><Link to="/toolkit" className="text-slate-300 hover:text-white transition-colors duration-200">Toolkit</Link></li>
-            <li><Link to="/portfolio" className="text-slate-300 hover:text-white transition-colors duration-200">Portfolio</Link></li>
+            <li><Link to="/my work" className="text-slate-300 hover:text-white transition-colors duration-200">My Work</Link></li>
             <li><Link to="/contact" className="text-slate-300 hover:text-white transition-colors duration-200">Contact</Link></li>
             {/* NEW LEGAL LINKS */}
             <li><Link to="/privacy-policy" className="text-slate-300 hover:text-white transition-colors duration-200">Privacy Policy</Link></li>
@@ -45,7 +45,7 @@ const Footer = () => {
             {/* Social Media Links (replace with actual icons/links) */}
             <li className="flex gap-4 mt-4 justify-center md:justify-start">
               <a href="https://www.linkedin.com/in/victor-seda-41145b371/" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors duration-200">LinkedIn</a>
-              <a href="https://x.com/victorseda818" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors duration-200">Twitter</a>
+              {/* <a href="https://x.com/victorseda818" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors duration-200">Twitter</a> */}
               {/* Add more social links as needed */}
             </li>
           </ul>

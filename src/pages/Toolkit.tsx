@@ -16,42 +16,42 @@ const Toolkit = () => {
       description: 'Automate content creation, scheduling, and publishing across platforms like YouTube, X, Instagram, Facebook, and LinkedIn.',
       icon: Feather, // Lucide icon component
       linkText: 'Request Workflows',
-      linkTo: '/contact'
+      linkTo: 'mailto:victor@victorseda.xyz'
     },
     {
       title: 'Lead Generation & Nurturing',
       description: 'Streamulate lead capture, qualification, and follow-up processes with automated email outreach and CRM integrations.',
       icon: Users, // Lucide icon component
       linkText: 'Request Workflows',
-      linkTo: '/contact'
+      linkTo: 'mailto:victor@victorseda.xyz'
     },
     {
       title: 'AI-Powered Marketing Workflows',
       description: 'Leverage advanced AI models for tasks like content generation, data analysis, and personalized customer interactions.',
       icon: Bot, // Lucide icon component
       linkText: 'Request Workflows',
-      linkTo: '/contact'
+      linkTo: 'mailto:victor@victorseda.xyz'
     },
     {
       title: 'Sales & CRM Automation',
       description: 'Automate CRM updates, sales pipeline management, and e-commerce order processing for improved efficiency.',
       icon: DollarSign, // Lucide icon component
       linkText: 'Request Workflows',
-      linkTo: '/contact'
+      linkTo: 'mailto:victor@victorseda.xyz'
     },
     {
       title: 'Reporting & Analytics Automation',
       description: 'Automate data extraction, analysis, and report generation from various marketing and sales platforms.',
       icon: BarChart2, // Lucide icon component
       linkText: 'Request Workflows',
-      linkTo: '/contact'
+      linkTo: 'mailto:victor@victorseda.xyz'
     },
     {
       title: 'Productivity & Internal Efficiencies',
       description: 'Boost team productivity with automated internal processes, notifications, and task management workflows.',
       icon: Zap, // Lucide icon component
       linkText: 'Request Workflows',
-      linkTo: '/contact'
+      linkTo: 'mailto:victor@victorseda.xyz'
     },
   ];
 
@@ -234,7 +234,7 @@ const Toolkit = () => {
                   Want This Funnel Customized & Integrated for Your Business?
                 </h3>
                 <p className="text-lg text-slate-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                  I can tailor this LinkedIn strategy and funnel to your specific target audience, refine the messaging for maximum response, and integrate it easily into your existing sales process.
+                  I can rewrite this LinkedIn strategy and funnel to your specific target audience, refine the messaging for maximum response, so it fits easily into your existing sales process.
                 </p>
                 <Link
                   to="/contact"
@@ -351,7 +351,7 @@ const Toolkit = () => {
                 Ready to Implement These In Your Business?
               </h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto dark:text-gray-200">
-                These blueprints are powerful, but their true value is unlocked through expert implementation and customization. If you're serious about leveraging advanced AI and automation in your processes, let's talk.
+                These blueprints are powerful, but their true value is unlocked through expert implementation and customization. If you're serious about leveraging advanced AI and automation in your processes, let's grab a coffee.
               </p>
               <Link
                 to="/contact"

@@ -34,44 +34,35 @@ const Home = () => {
   const processSteps = [
     {
       title: 'Discovery & Funnel Audit',
-      description: 'I analyze your current funnel, traffic sources, and conversion points to find the biggest gaps. This usually takes 1-2 weeks.',
+      description: 'I analyze your current funnel, traffic sources, and conversion points to find the biggest gaps. This takes 1-2 weeks.',
       emoji: '🔍'
     },
     {
       title: 'Build & Implement',
-      description: 'I build the systems—email sequences, landing pages, automation flows, tracking setup. You review and approve, I handle execution.',
+      description: 'I build the systems: sequences, landing pages, automation flows, tracking setup. You review and approve, I handle execution.',
       emoji: '⚙️'
     },
     {
       title: 'Test & Optimize',
-      description: 'We launch, measure what works, kill what doesn\'t, and scale the winners. Ongoing optimization focused on pipeline contribution.',
+      description: 'We launch, measure what works, kill what doesn\'t, and scale the winners.',
       emoji: '📈'
     }
   ];
 
-  const credibilityPoints = [
-    {
-      title: 'I\'ve Done This at Scale',
-      description: 'I was Lead Digital Marketing Specialist at a video production agency, where I built and managed acquisition systems that brought in consistent B2B clients month over month. I know how this works.'
-    },
-    {
-      title: 'I Build My Own Tools',
-      description: 'I don\'t just talk about automation—I built my own cold email infrastructure from scratch (AWS, Resend, custom backend). If you need someone who can actually implement technical marketing systems, that\'s me.'
-    },
-    {
-      title: 'I Only Do B2B',
-      description: 'I\'m not an agency that does everything for everyone. I focus exclusively on B2B marketing automation because that\'s where I deliver the most impact. If you need someone who understands long sales cycles and pipeline metrics, you\'re in the right place.'
-    }
-  ];
+  // Testimonial data - replace with your actual testimonial
+  const testimonial = {
+    quote: "Victor was instrumental in building our lead gen systems using the workflows we already had. He set up our funnels for inbound traffic, SEO strategy, and tracking systems for our clients. It was brilliant.",
+    name: "Carl S.",
+    role: "Co-founder",
+    company: "Adsome",
+    photo: "/images/testimonials/carlgravatar.jpg", // Replace with actual path
+    companyLogo: "/images/logos/adsomelogo.png" // Replace with actual path
+  };
 
   const faqs = [
     {
-      question: 'How much does this cost?',
-      answer: 'It depends on scope, but most clients invest $3-7K/month for done-for-you marketing automation and campaign management. I can give you exact pricing after we talk about your goals.'
-    },
-    {
       question: 'Do you work with early-stage startups?',
-      answer: 'If you\'re pre-product-market fit or doing less than $500K in revenue, I\'m probably not the right fit yet. You need to validate your offer and messaging first before investing in automation.'
+      answer: 'If you\'re pre-product-market fit or have less than $5k in marketing budget, I\'m probably not the right fit. You need to validate your offer and messaging first before investing in automation.'
     },
     {
       question: 'How long until we see results?',
@@ -83,7 +74,11 @@ const Home = () => {
     },
     {
       question: 'What if I already have a marketing team?',
-      answer: 'I often work alongside internal teams to build the systems they don\'t have bandwidth for—email automation, funnel optimization, technical implementation. If that\'s your situation, we can make it work.'
+      answer: 'I often work alongside internal teams to build the systems they don\'t have bandwidth for. If that\'s your situation, we can make it work.'
+    },
+    {
+      question: 'Who will I be working with?',
+      answer: 'You\'ll be working directly with me, Victor. I don\'t outsource to a team or hand you off to junior staff. When you hire me, you get me.'
     },
     {
       question: 'Where are you based?',
@@ -91,11 +86,11 @@ const Home = () => {
     },
     {
       question: 'Can we pay in installments?',
-      answer: 'Yes, we can structure payment terms during our discovery call to find what works for your budget.'
+      answer: 'Yes, we can structure payment terms whenever to find what works for your budget.'
     },
     {
       question: 'Do we own everything after the project?',
-      answer: 'Absolutely. Upon completion, you have full ownership of all strategies, automation flows, campaign assets, and documentation. Everything is handed over ready to scale.'
+      answer: 'Absolutely. Upon completion, you have full ownership of all strategies, automation flows, campaign assets, and documentation.'
     }
   ];
 
@@ -161,8 +156,8 @@ const Home = () => {
                 <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
                   <span className="text-white text-2xl">✉️</span>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Email Sequences That Actually Nurture</h3>
-                <p className="text-slate-600 dark:text-gray-300">I build automated email flows that educate prospects, address objections, and push them toward demos—so your sales team only talks to people who are ready.</p>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Email Sequences That Convert</h3>
+                <p className="text-slate-600 dark:text-gray-300">Automated flows that educate, address objections, and push prospects toward demos. Sales only talks to warm leads.</p>
               </div>
             </AnimatedSection>
 
@@ -171,8 +166,8 @@ const Home = () => {
                 <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
                   <span className="text-white text-2xl">🎯</span>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Conversion Funnels That Qualify Leads</h3>
-                <p className="text-slate-600 dark:text-gray-300">From first click to booked demo, I design funnels that filter out tire-kickers and surface high-intent prospects automatically.</p>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Marketing Funnels That Qualify Leads</h3>
+                <p className="text-slate-600 dark:text-gray-300">Design systems that filter out tire-kickers and surface high-intent buyers automatically.</p>
               </div>
             </AnimatedSection>
 
@@ -181,8 +176,8 @@ const Home = () => {
                 <div className="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-4 dark:bg-blue-600">
                   <span className="text-white text-2xl">📊</span>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Marketing Systems That Scale</h3>
-                <p className="text-slate-600 dark:text-gray-300">I set up the infrastructure (lead scoring, segmentation, retargeting) so your acquisition doesn't break when you 2x your ad spend.</p>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Systems built for Increased Performance</h3>
+                <p className="text-slate-600 dark:text-gray-300"> Lead scoring, segmentation, and tracking setup so acquisition doesn't break when you scale.</p>
               </div>
             </AnimatedSection>
           </div>
@@ -213,7 +208,7 @@ const Home = () => {
                 Who I Work With
               </h2>
               <p className="text-xl text-slate-600 dark:text-gray-300 mb-8">
-                I work with B2B SaaS and tech companies doing $500K-$5M in revenue who have one or more of these problems:
+                I work with B2B SaaS and tech companies who've got at least $100k in budget for marketing spend and has any of these problems:
               </p>
             </div>
           </AnimatedSection>
@@ -222,11 +217,11 @@ const Home = () => {
             <div className="max-w-4xl mx-auto space-y-4 mb-12">
               <div className="flex items-start space-x-3">
                 <span className="text-slate-900 dark:text-white mt-1">•</span>
-                <p className="text-lg text-slate-700 dark:text-gray-200">You're getting traffic but conversion rates are terrible</p>
+                <p className="text-lg text-slate-700 dark:text-gray-200">You're getting traffic but conversion rates are terrible at your level</p>
               </div>
               <div className="flex items-start space-x-3">
                 <span className="text-slate-900 dark:text-white mt-1">•</span>
-                <p className="text-lg text-slate-700 dark:text-gray-200">Your sales team wastes time on unqualified leads</p>
+                <p className="text-lg text-slate-700 dark:text-gray-200">Your sales team wastes months on unqualified leads</p>
               </div>
               <div className="flex items-start space-x-3">
                 <span className="text-slate-900 dark:text-white mt-1">•</span>
@@ -290,27 +285,54 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Credibility Section */}
+      {/* Testimonial Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-                Why Work With Me?
+                What Clients Say
               </h2>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {credibilityPoints.map((point, index) => (
-              <AnimatedSection key={point.title} delay={index * 100}>
-                <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm dark:bg-gray-900 dark:border-gray-700 dark:shadow-lg">
-                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">{point.title}</h3>
-                  <p className="text-slate-600 dark:text-gray-300">{point.description}</p>
+          <AnimatedSection delay={200}>
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white rounded-2xl p-8 md:p-12 border border-gray-200 shadow-lg dark:bg-gray-900 dark:border-gray-700">
+                {/* Quote */}
+                <div className="mb-8">
+                  <svg className="w-12 h-12 text-blue-600 dark:text-blue-400 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <p className="text-xl md:text-2xl text-slate-700 dark:text-gray-200 leading-relaxed italic">
+                    {testimonial.quote}
+                  </p>
                 </div>
-              </AnimatedSection>
-            ))}
-          </div>
+
+                {/* Author info */}
+                {/* Author info */}
+                <div className="flex items-center justify-between flex-wrap gap-6">
+                  <div className="flex items-center space-x-4">
+                    {/* Photo with initials */}
+                    <div className="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">CA</span>
+                    </div>
+
+                    {/* Name and role */}
+                    <div>
+                      <p className="font-semibold text-lg text-slate-900 dark:text-white">{testimonial.name}</p>
+                      <p className="text-slate-600 dark:text-gray-400">{testimonial.role}</p>
+                    </div>
+                  </div>
+
+                  {/* Company name (no logo) */}
+                  <div className="flex items-center">
+                    <span className="text-lg font-semibold text-slate-600 dark:text-gray-400">{testimonial.company}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
 
           <div className="text-center mt-12">
             <AnimatedSection delay={400}>
@@ -370,13 +392,13 @@ const Home = () => {
         <div className="max-w-7xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-              Ready to Build a System That Actually Fills Your Pipeline?
+              You're Here. So, take the Next Step.
             </h2>
             <p className="text-xl text-slate-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              If you're a B2B company ready to scale acquisition with marketing automation, let's talk. I'll audit your current funnel and give you my opinion.
+              Let's grab a coffee. I'll audit your current funnel and give you my opinion.
             </p>
             <p className="text-lg text-slate-600 dark:text-gray-300 mb-8">
-              I take on a limited number of projects each month to keep quality high. Schedule a discovery call below:
+              I take on 2 projects each month to keep quality high. Schedule a discovery call below:
             </p>
           </AnimatedSection>
           <div style={{ minWidth: 320, height: 700, overflow: "hidden" }}>

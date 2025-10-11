@@ -36,7 +36,7 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-              Contact
+              Let's Talk Shop
             </h1>
             <p className="text-xl text-slate-600 dark:text-gray-300">
               Book a time that works for you
@@ -92,7 +92,7 @@ const Contact = () => {
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
-              Let's Connect
+              Reach out to me Directly
             </h2>
             <div className="flex justify-center space-x-6">
               <a
@@ -104,12 +104,12 @@ const Contact = () => {
                 LinkedIn
               </a>
               <a
-                href="https://twitter.com"
+                href="mailto:victor@victorseda.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-600 hover:text-slate-900 transition-colors dark:text-gray-300 dark:hover:text-white"
               >
-                Twitter
+                Email
               </a>
             </div>
           </AnimatedSection>

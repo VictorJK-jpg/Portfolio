@@ -198,7 +198,7 @@ const Portfolio = () => {
               Ready to Build a System That Actually Fills Your Pipeline?
             </h2>
             <p className="text-xl text-slate-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              If you're a B2B company ready to scale acquisition with marketing automation, let's talk. I'll audit your current funnel and show you where the gaps are.
+              If you're a business owner ready to improve your acquisition with better marketing automation, let's grab a coffee. I'll audit your current funnel and show you where the gaps are.
             </p>
             <button
               onClick={() => (window.location.href = '/contact')}
