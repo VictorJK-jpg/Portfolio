@@ -62,7 +62,7 @@ const App = () => {
 
             {/* 2. Main App Routes (with Nav/Footer) */}
             {/* The "*" path here means "catch everything else" */}
-            <Route path="*" element={<div className="min-h-screen bg-white font-sans flex flex-col"><MainLayout /></div>} />
+            <Route path="*" element={<div className="min-h-screen bg-black text-white font-sans flex flex-col"><MainLayout /></div>} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
