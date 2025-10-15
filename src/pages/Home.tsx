@@ -14,7 +14,7 @@ const VideoHero = () => {
           frameBorder="0" 
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          title="2025-09-15 16-47-51"
+          title="Victor Seda"
           style={{
             position: 'absolute', 
             top: 0, 
