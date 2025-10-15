@@ -26,6 +26,7 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
+            <li><Link to="/" className="text-gray-400 hover:text-white transition-colors duration -200">Home</Link></li>
             <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors duration-200">About</Link></li>
             <li><Link to="/toolkit" className="text-gray-400 hover:text-white transition-colors duration-200">Toolkit</Link></li>
             <li><Link to="/my work" className="text-gray-400 hover:text-white transition-colors duration-200">My Work</Link></li>
