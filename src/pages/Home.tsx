@@ -5,15 +5,17 @@ import { useState, useEffect } from 'react';
 import { getCalApi } from '@calcom/embed-react';
 
 // Video component
+// Video component
 const VideoHero = () => {
   return (
     <div className="bg-gradient-to-br from-[#1E293B] to-[#334155] dark:from-gray-800 dark:to-gray-900 rounded-3xl p-1 aspect-video relative overflow-hidden shadow-xl">
       <div style={{position: 'relative', paddingBottom: '56.25%', height: 0}}>
         <iframe 
-          src="https://player.vimeo.com/video/1127459291?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+          src="https://www.loom.com/embed/9ccd4027e3dc4eeaa5434d34a067abca?sid=949451a2-ff9a-4b05-9721-557782a3d9ea" 
           frameBorder="0" 
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true"
+          allowFullScreen
           title="Victor Seda"
           style={{
             position: 'absolute', 
@@ -116,7 +118,7 @@ const Home = () => {
                 B2B Marketing Automation That Actually Works
               </h1>
               <p className="text-lg text-[#94A3B8] mb-8 leading-relaxed font-normal">
-                Email sequences, lead nurturing systems, and conversion funnels for SaaS founders.
+                Email sequences, lead nurturing systems, and conversion funnels for SaaS founders. Perfect for busy founders who need expertise without the overhead of a full team.
               </p>
               <button
                 onClick={scrollToContact}
