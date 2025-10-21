@@ -56,8 +56,30 @@ export default function Waitlist() {
   };
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4">
-      <div className="max-w-3xl w-full">
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
+      {/* Decorative Left Side Squares */}
+      <div className="absolute left-0 top-0 h-full w-32 lg:w-64 pointer-events-none overflow-hidden">
+        <div className="absolute top-20 left-4 w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-lg transform rotate-45 animate-pulse"></div>
+        <div className="absolute top-48 left-8 w-24 h-24 bg-gradient-to-br from-orange-500/10 to-red-600/10 rounded-xl transform -rotate-12 animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-80 left-2 w-12 h-12 bg-gradient-to-br from-green-500/15 to-teal-600/15 rounded-lg transform rotate-12 animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-96 left-12 w-20 h-20 bg-gradient-to-br from-indigo-500/10 to-blue-600/10 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute bottom-32 left-6 w-14 h-14 bg-gradient-to-br from-pink-500/15 to-purple-600/15 rounded-lg transform rotate-45 animate-pulse" style={{animationDelay: '1.5s'}}></div>
+      </div>
+
+      {/* Decorative Right Side Squares */}
+      <div className="absolute right-0 top-0 h-full w-32 lg:w-64 pointer-events-none overflow-hidden">
+        <div className="absolute top-32 right-8 w-20 h-20 bg-gradient-to-br from-purple-500/15 to-pink-600/15 rounded-xl transform rotate-12 animate-pulse"></div>
+        <div className="absolute top-64 right-4 w-16 h-16 bg-gradient-to-br from-teal-500/20 to-green-600/20 rounded-lg transform -rotate-45 animate-pulse" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-96 right-12 w-24 h-24 bg-gradient-to-br from-red-500/10 to-orange-600/10 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-48 right-6 w-12 h-12 bg-gradient-to-br from-blue-500/15 to-indigo-600/15 rounded-lg transform rotate-45 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute bottom-20 right-2 w-18 h-18 bg-gradient-to-br from-yellow-500/10 to-orange-600/10 rounded-xl transform -rotate-12 animate-pulse" style={{animationDelay: '1s'}}></div>
+      </div>
+
+      {/* Floating Gradient Orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-600/5 to-purple-600/5 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-orange-600/5 to-red-600/5 rounded-full blur-3xl animate-pulse pointer-events-none" style={{animationDelay: '2s'}}></div>
+
+      <div className="max-w-3xl w-full relative z-10">
 
         {submitted ? (
           <div className="p-8 bg-green-600 rounded-lg shadow-xl text-center">
@@ -84,6 +106,79 @@ export default function Waitlist() {
               <p className="text-lg text-gray-400">
                 This is the same infrastructure I use for my own outreach - custom deployment on your domain, isolated sending infrastructure, full deliverability optimization.
               </p>
+            </div>
+
+            {/* Pre-Qualification Section */}
+            <div className="bg-gray-800 rounded-lg p-8 mb-12">
+              <h2 className="text-2xl font-bold mb-6">This is for B2B founders who are tired of...</h2>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <div>
+                    <p className="text-gray-300 font-semibold">Watching open rates drop from 22% to 15% in Mailchimp/Outreach</p>
+                    <p className="text-gray-400 text-sm mt-1">Despite warming up domains and following "best practices"</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <div>
+                    <p className="text-gray-300 font-semibold">Paying $200+/month for tools that throttle your sends</p>
+                    <p className="text-gray-400 text-sm mt-1">While your competitors with custom infrastructure hit inboxes consistently</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <div>
+                    <p className="text-gray-300 font-semibold">Sales team complaining about "bad leads" from your outreach</p>
+                    <p className="text-gray-400 text-sm mt-1">When the real problem is your emails aren't reaching decision-makers</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <div>
+                    <p className="text-gray-300 font-semibold">Black-box systems you don't control</p>
+                    <p className="text-gray-400 text-sm mt-1">Shared IP addresses that get you penalized for others' mistakes</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 p-4 bg-gray-700 rounded-lg">
+                <p className="text-center text-gray-300 italic">
+                  "If you're sending less than 100 emails a day or just starting with cold outreach, this isn't for you yet. 
+                  This is for B2B companies already doing volume who need better infrastructure."
+                </p>
+              </div>
+            </div>
+
+            {/* Cost of Inaction Calculator */}
+            <div className="bg-gray-800 rounded-lg p-8 mb-12">
+              <h2 className="text-2xl font-bold mb-6">The Hidden Cost of Using Standard Email Platforms</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 text-red-400">What's Happening Now</h3>
+                  <ul className="space-y-2 text-gray-300">
+                    <li>• 15-20% email deliverability to inbox</li>
+                    <li>• 2-3% positive response rate</li>
+                    <li>• $200-500/month in tool subscriptions</li>
+                    <li>• 10-15 hours/week managing deliverability</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 text-green-400">With Custom Infrastructure</h3>
+                  <ul className="space-y-2 text-gray-300">
+                    <li>• 85-95% email deliverability to inbox</li>
+                    <li>• 8-12% positive response rate</li>
+                    <li>• $300/month maintenance after setup</li>
+                    <li>• 2-3 hours/week managing campaigns</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-6 p-4 bg-gray-700 rounded-lg">
+                <p className="text-center text-gray-300">
+                  If you're sending 250 emails/day at $10K deal value, that's <span className="text-green-400 font-bold">$80K+ in monthly opportunities</span> you're currently missing.
+                </p>
+              </div>
             </div>
 
             {/* Video Section */}
@@ -143,22 +238,23 @@ export default function Waitlist() {
                     className="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="">Select...</option>
-                    <option value="0-50">0-50 emails/day</option>
+                    <option value="0-50">0-50 emails/day (this isn't for you yet)</option>
                     <option value="50-100">50-100 emails/day</option>
-                    <option value="100-250">100-250 emails/day</option>
+                    <option value="100-250">100-250 emails/day (sweet spot)</option>
                     <option value="250+">250+ emails/day</option>
-                    <option value="not-started">Haven't started yet</option>
+                    <option value="not-started">Haven't started yet (come back later)</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="challenge" className="block text-sm font-medium mb-2">What's your biggest cold email challenge right now? (if any)</label>
+                  <label htmlFor="challenge" className="block text-sm font-medium mb-2">What's your biggest cold email challenge right now?*</label>
                   <textarea
                     name="challenge"
                     id="challenge"
                     rows={3}
                     required
                     className="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Be specific - deliverability issues, low response rates, platform limitations, etc."
                   />
                 </div>
 
@@ -174,7 +270,7 @@ export default function Waitlist() {
                     <option value="asap">ASAP (within 2 weeks)</option>
                     <option value="1-month">Within 1 month</option>
                     <option value="2-3-months">2-3 months</option>
-                    <option value="exploring">Just exploring</option>
+                    <option value="exploring">Just exploring (this isn't for you)</option>
                   </select>
                 </div>
 
