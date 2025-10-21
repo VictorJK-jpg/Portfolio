@@ -1,11 +1,11 @@
 // src/pages/Waitlist.tsx
 import React, { useState } from 'react';
 
-// Video component
+// Video component - Fixed for mobile
 const VideoHero = () => {
   return (
-    <div className="bg-gradient-to-br from-[#1E293B] to-[#334155] rounded-3xl p-1 aspect-video relative overflow-hidden shadow-xl">
-      <div style={{position: 'relative', paddingBottom: '56.25%', height: 0}}>
+    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1E293B] to-[#334155] rounded-3xl p-1 overflow-hidden shadow-xl">
         <iframe 
           src="https://www.loom.com/embed/9ccd4027e3dc4eeaa5434d34a067abca?sid=949451a2-ff9a-4b05-9721-557782a3d9ea" 
           frameBorder="0" 
@@ -13,12 +13,8 @@ const VideoHero = () => {
           mozallowfullscreen="true"
           allowFullScreen
           title="Victor Seda"
+          className="w-full h-full"
           style={{
-            position: 'absolute', 
-            top: 0, 
-            left: 0, 
-            width: '100%', 
-            height: '100%',
             borderRadius: '20px'
           }}
         ></iframe>
