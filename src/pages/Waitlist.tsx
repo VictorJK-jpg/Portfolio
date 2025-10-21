@@ -1,6 +1,32 @@
 // src/pages/Waitlist.tsx
 import React, { useState } from 'react';
 
+// Video component
+const VideoHero = () => {
+  return (
+    <div className="bg-gradient-to-br from-[#1E293B] to-[#334155] rounded-3xl p-1 aspect-video relative overflow-hidden shadow-xl">
+      <div style={{position: 'relative', paddingBottom: '56.25%', height: 0}}>
+        <iframe 
+          src="https://www.loom.com/embed/9ccd4027e3dc4eeaa5434d34a067abca?sid=949451a2-ff9a-4b05-9721-557782a3d9ea" 
+          frameBorder="0" 
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true"
+          allowFullScreen
+          title="Victor Seda"
+          style={{
+            position: 'absolute', 
+            top: 0, 
+            left: 0, 
+            width: '100%', 
+            height: '100%',
+            borderRadius: '20px'
+          }}
+        ></iframe>
+      </div>
+    </div>
+  );
+};
+
 export default function Waitlist() {
   const [submitted, setSubmitted] = useState(false);
   
@@ -58,6 +84,11 @@ export default function Waitlist() {
               <p className="text-lg text-gray-400">
                 This is the same infrastructure I use for my own outreach - custom deployment on your domain, isolated sending infrastructure, full deliverability optimization.
               </p>
+            </div>
+
+            {/* Video Section */}
+            <div className="mb-12">
+              <VideoHero />
             </div>
 
             {/* Email Form */}

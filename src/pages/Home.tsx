@@ -108,16 +108,16 @@ const Home = () => {
     <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0F172A] transition-colors duration-300" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif' }}>
       
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center px-6 lg:px-16 py-20 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] dark:from-[#0F172A] dark:via-[#1E293B] dark:to-[#0F172A]">
+      <section className="min-h-screen flex items-center px-6 lg:px-16 py-20">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-5 gap-8 items-center">
             
             {/* Text - Smaller column */}
             <AnimatedSection className="lg:col-span-2">
-              <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+              <h1 className="text-5xl lg:text-6xl font-bold text-[#1E293B] dark:text-white mb-6 leading-tight tracking-tight">
                 B2B Marketing Automation That Actually Works
               </h1>
-              <p className="text-lg text-[#94A3B8] mb-8 leading-relaxed font-normal">
+              <p className="text-lg text-[#64748B] dark:text-gray-300 mb-8 leading-relaxed font-normal">
                 Email sequences, lead nurturing systems, and conversion funnels for SaaS founders. Perfect for busy founders who need expertise without the overhead of a full team.
               </p>
               <button
