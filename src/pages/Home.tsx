@@ -6,26 +6,41 @@ import { getCalApi } from '@calcom/embed-react';
 
 // Video component
 // Video component
+// Video component with arrow and label
+// Video component with arrow and label
 const VideoHero = () => {
   return (
-    <div className="bg-gradient-to-br from-[#1E293B] to-[#334155] dark:from-gray-800 dark:to-gray-900 rounded-3xl p-1 aspect-video relative overflow-hidden shadow-xl">
-      <div style={{position: 'relative', paddingBottom: '56.25%', height: 0}}>
-        <iframe 
-          src="https://www.loom.com/embed/9ccd4027e3dc4eeaa5434d34a067abca?sid=949451a2-ff9a-4b05-9721-557782a3d9ea" 
-          frameBorder="0" 
-          webkitallowfullscreen="true"
-          mozallowfullscreen="true"
-          allowFullScreen
-          title="Victor Seda"
-          style={{
-            position: 'absolute', 
-            top: 0, 
-            left: 0, 
-            width: '100%', 
-            height: '100%',
-            borderRadius: '20px'
-          }}
-        ></iframe>
+    <div className="relative">
+      {/* Arrow and label */}
+      <div className="absolute -top-12 right-0 flex items-center gap-2 animate-bounce">
+        <div className="bg-[#FF6B35] text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+          Remail Demo
+        </div>
+        <svg className="w-5 h-5 text-[#FF6B35]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+      
+      {/* Original video container */}
+      <div className="bg-gradient-to-br from-[#1E293B] to-[#334155] dark:from-gray-800 dark:to-gray-900 rounded-3xl p-1 aspect-video relative overflow-hidden shadow-xl">
+        <div style={{position: 'relative', paddingBottom: '56.25%', height: 0}}>
+          <iframe 
+            src="https://www.loom.com/embed/6ad0a0a6206043c18e5b00af6d72861e" 
+            frameBorder="0" 
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            allowFullScreen
+            title="Victor Seda"
+            style={{
+              position: 'absolute', 
+              top: 0, 
+              left: 0, 
+              width: '100%', 
+              height: '100%',
+              borderRadius: '20px'
+            }}
+          ></iframe>
+        </div>
       </div>
     </div>
   );
@@ -118,7 +133,7 @@ const Home = () => {
                 B2B Marketing Automation That Actually Works
               </h1>
               <p className="text-lg text-[#64748B] dark:text-gray-300 mb-8 leading-relaxed font-normal">
-                Email sequences, lead nurturing systems, and conversion funnels for SaaS founders. Perfect for busy founders who need expertise without the overhead of a full team.
+                I build marketing systems, sales systems, and conversion funnels for SaaS founders. Perfect for busy founders who need expertise without the overhead of a full team.
               </p>
               <button
                 onClick={scrollToContact}
