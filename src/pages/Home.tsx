@@ -139,32 +139,23 @@ const Home = () => {
       
       {/* Hero Section */}
       <section className="min-h-screen flex items-center px-6 lg:px-16 py-20">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="grid lg:grid-cols-5 gap-8 items-center">
-            
-            {/* Text - Smaller column */}
-            <AnimatedSection className="lg:col-span-2">
-              <h1 className="text-5xl lg:text-6xl font-bold text-[#1E293B] dark:text-white mb-6 leading-tight tracking-tight">
-                <span className="inline-block transition-all duration-500 ease-in-out">
-                  {taglines[currentTaglineIndex]}
-                </span>
-              </h1>
-              <p className="text-lg text-[#64748B] dark:text-gray-300 mb-8 leading-relaxed font-normal">
-                I build marketing systems, sales systems, and conversion funnels for SaaS founders. Perfect for busy founders who need expertise without the overhead of a full team.
-              </p>
-              <button
-                onClick={scrollToContact}
-                className="bg-[#FF6B35] hover:bg-[#E85A2A] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-200 transform hover:scale-105"
-              >
-                Let's Talk
-              </button>
-            </AnimatedSection>
-
-            {/* Video - Larger column - REMOVED/COMMENTED */}
-            {/* <AnimatedSection delay={200} className="lg:col-span-3">
-              <VideoHero />
-            </AnimatedSection> */}
-          </div>
+        <div className="max-w-4xl mx-auto w-full text-center">
+          <AnimatedSection>
+            <h1 className="text-5xl lg:text-6xl font-bold text-[#1E293B] dark:text-white mb-6 leading-tight tracking-tight">
+              <span className="inline-block transition-all duration-500 ease-in-out">
+                {taglines[currentTaglineIndex]}
+              </span>
+            </h1>
+            <p className="text-lg text-[#64748B] dark:text-gray-300 mb-8 leading-relaxed font-normal max-w-2xl mx-auto">
+              I build marketing systems, sales systems, and conversion funnels for SaaS founders. Perfect for busy founders who need expertise without the overhead of a full team.
+            </p>
+            <button
+              onClick={scrollToContact}
+              className="bg-[#FF6B35] hover:bg-[#E85A2A] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-200 transform hover:scale-105"
+            >
+              Let's Talk
+            </button>
+          </AnimatedSection>
         </div>
       </section>
 

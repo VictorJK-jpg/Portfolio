@@ -1,12 +1,12 @@
-// src/utils/lazyLoading.ts
+// src/utils/lazyLoading.tsx
 import React, { lazy } from 'react';
 
 // Network-aware loading utilities
 export const getConnectionType = () => {
-  if (typeof navigator === 'undefined' || !navigator.connection) {
+  if (typeof navigator === 'undefined' || !(navigator as any).connection) {
     return 'unknown';
   }
-  return navigator.connection.effectiveType;
+  return (navigator as any).connection.effectiveType;
 };
 
 export const isSlowConnection = () => {
@@ -20,7 +20,7 @@ export const isFastConnection = () => {
 };
 
 // Enhanced lazy loading with network awareness
-export const createLazyComponent = <T extends React.ComponentType<any>>(
+export const createLazyComponent = <T extends React.ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>,
   options?: {
     fallback?: React.ComponentType;
@@ -30,7 +30,7 @@ export const createLazyComponent = <T extends React.ComponentType<any>>(
   return lazy(() => {
     // For slow connections, add a small delay to prevent overwhelming the network
     if (isSlowConnection() && !options?.prefetchOnSlowConnection) {
-      return new Promise(resolve => {
+      return new Promise<{ default: T }>(resolve => {
         setTimeout(() => {
           importFunc().then(resolve);
         }, 100);
@@ -70,7 +70,7 @@ export const prefetchPage = async (path: string) => {
   // Don't prefetch on very slow connections
   if (isSlowConnection()) return;
 
-  const pageMap: Record<string, () => Promise<any>> = {
+  const pageMap: Record<string, () => Promise<unknown>> = {
     '/about': () => import('../pages/About'),
     '/toolkit': () => import('../pages/Toolkit'),
     '/portfolio': () => import('../pages/My Work'),
