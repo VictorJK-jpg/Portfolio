@@ -77,6 +77,23 @@ const FAQItem = ({ question, answer, isOpen, onClick }: {
 
 const Home = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [currentTaglineIndex, setCurrentTaglineIndex] = useState(0);
+
+  // Rotating taglines
+  const taglines = [
+    "B2B Marketing Automation That Actually Works",
+    "Turn Traffic Into Qualified Demo Calls", 
+    "Marketing Systems That Scale Your Revenue"
+  ];
+
+  // Rotate taglines every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTaglineIndex((prevIndex) => (prevIndex + 1) % taglines.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [taglines.length]);
 
   // Initialize Cal.com
   useEffect(() => {
@@ -128,7 +145,9 @@ const Home = () => {
             {/* Text - Smaller column */}
             <AnimatedSection className="lg:col-span-2">
               <h1 className="text-5xl lg:text-6xl font-bold text-[#1E293B] dark:text-white mb-6 leading-tight tracking-tight">
-                B2B Marketing Automation That Actually Works
+                <span className="inline-block transition-all duration-500 ease-in-out">
+                  {taglines[currentTaglineIndex]}
+                </span>
               </h1>
               <p className="text-lg text-[#64748B] dark:text-gray-300 mb-8 leading-relaxed font-normal">
                 I build marketing systems, sales systems, and conversion funnels for SaaS founders. Perfect for busy founders who need expertise without the overhead of a full team.
