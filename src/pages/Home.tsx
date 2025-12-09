@@ -82,15 +82,14 @@ const Home = () => {
   // Rotating taglines
   const taglines = [
     "B2B Marketing Automation That Actually Works",
-    "Turn Traffic Into Qualified Demo Calls", 
-    "Marketing Systems That Scale Your Revenue"
+    "SEO for Agencies", 
   ];
 
-  // Rotate taglines every 3 seconds
+  // Rotate taglines every 6 seconds (allowing 1s fade out, 4s display, 1s fade in)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTaglineIndex((prevIndex) => (prevIndex + 1) % taglines.length);
-    }, 3000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [taglines.length]);
@@ -141,13 +140,21 @@ const Home = () => {
       <section className="min-h-screen flex items-center px-6 lg:px-16 py-20">
         <div className="max-w-4xl mx-auto w-full text-center">
           <AnimatedSection>
-            <h1 className="text-5xl lg:text-6xl font-bold text-[#1E293B] dark:text-white mb-6 leading-tight tracking-tight">
-              <span className="inline-block transition-all duration-500 ease-in-out">
-                {taglines[currentTaglineIndex]}
-              </span>
+            <h1 className="text-5xl lg:text-6xl font-bold text-[#1E293B] dark:text-white mb-6 leading-tight tracking-tight relative h-20">
+              {taglines.map((tagline, index) => (
+                <span
+                  key={index}
+                  className="absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out"
+                  style={{
+                    opacity: currentTaglineIndex === index ? 1 : 0,
+                  }}
+                >
+                  {tagline}
+                </span>
+              ))}
             </h1>
             <p className="text-lg text-[#64748B] dark:text-gray-300 mb-8 leading-relaxed font-normal max-w-2xl mx-auto">
-              I build marketing systems, sales systems, and conversion funnels for SaaS founders. Perfect for busy founders who need expertise without the overhead of a full team.
+              I run marketing systems, sales systems, and funnels for business owners. Perfect for busy founders who need expertise without the overhead of a full team.
             </p>
             <button
               onClick={scrollToContact}
@@ -249,17 +256,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Clear qualification statement */}
-            <div className="mt-12 text-center">
-              <div className="inline-block bg-gradient-to-r from-[#F8FAFC] to-white dark:from-[#1E293B] dark:to-[#1E293B] rounded-2xl p-6 border border-[#E2E8F0] dark:border-gray-700 shadow-lg">
-                <p className="text-lg text-[#1E293B] dark:text-white font-semibold mb-2">
-                  I partner with businesses who have a real marketing budget
-                </p>
-                <p className="text-base text-[#64748B] dark:text-gray-300">
-                  If you're getting traffic but not enough demos, we should talk.
-                </p>
-              </div>
-            </div>
           </AnimatedSection>
         </div>
       </section>

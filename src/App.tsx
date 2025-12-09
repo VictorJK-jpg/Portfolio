@@ -5,7 +5,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { SmartLoadingSpinner } from "./utils/lazyLoading.tsx";
 
 // Import your components
 import Navigation from "./components/Navigation";
@@ -35,43 +34,43 @@ const MainLayout = () => (
     <main className="flex-grow">
       <Routes>
         <Route path="/" element={
-          <Suspense fallback={<SmartLoadingSpinner />}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Home />
           </Suspense>
         } />
         <Route path="/about" element={
-          <Suspense fallback={<SmartLoadingSpinner />}>
+          <Suspense fallback={<div>Loading...</div>}>
             <About />
           </Suspense>
         } />
         <Route path="/contact" element={
-          <Suspense fallback={<SmartLoadingSpinner />}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Contact />
           </Suspense>
         } />
         <Route path="/portfolio" element={
-          <Suspense fallback={<SmartLoadingSpinner />}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Portfolio />
           </Suspense>
         } />
         <Route path="/toolkit" element={
-          <Suspense fallback={<SmartLoadingSpinner />}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Toolkit />
           </Suspense>
         } />
         <Route path="/privacy-policy" element={
-          <Suspense fallback={<SmartLoadingSpinner />}>
+          <Suspense fallback={<div>Loading...</div>}>
             <PrivacyPolicy />
           </Suspense>
         } />
         <Route path="/terms-of-service" element={
-          <Suspense fallback={<SmartLoadingSpinner />}>
+          <Suspense fallback={<div>Loading...</div>}>
             <TermsOfService />
           </Suspense>
         } />
         {/* IMPORTANT: This catch-all must be the last one in this Routes block */}
         <Route path="*" element={
-          <Suspense fallback={<SmartLoadingSpinner />}>
+          <Suspense fallback={<div>Loading...</div>}>
             <NotFound />
           </Suspense>
         } /> 
@@ -92,7 +91,7 @@ const App = () => {
           <Routes>
             {/* 1. Dedicated, Full-Screen Route for the Lander (No Nav/Footer) */}
             <Route path="/waitlist" element={
-              <Suspense fallback={<SmartLoadingSpinner />}>
+              <Suspense fallback={<div>Loading...</div>}>
                 <Waitlist />
               </Suspense>
             } />
