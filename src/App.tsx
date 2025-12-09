@@ -1,29 +1,30 @@
 // src/App.tsx
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { SmartLoadingSpinner } from "./utils/lazyLoading.tsx";
 
 // Import your components
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
-// Import your page components
-import Home from "./pages/Home";
-import Portfolio from "./pages/My Work";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Toolkit from "./pages/Toolkit";
-import NotFound from "./pages/NotFound";
+// Lazy load your page components for better performance
+const Home = lazy(() => import("./pages/Home"));
+const Portfolio = lazy(() => import("./pages/My Work"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Toolkit = lazy(() => import("./pages/Toolkit"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
-// Import new legal pages
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfService from "./pages/TermsOfService";
+// Lazy load legal pages
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 
-// Waitlist Import
-import Waitlist from './pages/Waitlist';
+// Lazy load waitlist
+const Waitlist = lazy(() => import('./pages/Waitlist'));
 
 const queryClient = new QueryClient();
 
@@ -33,15 +34,47 @@ const MainLayout = () => (
     <Navigation />
     <main className="flex-grow">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/toolkit" element={<Toolkit />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/" element={
+          <Suspense fallback={<SmartLoadingSpinner />}>
+            <Home />
+          </Suspense>
+        } />
+        <Route path="/about" element={
+          <Suspense fallback={<SmartLoadingSpinner />}>
+            <About />
+          </Suspense>
+        } />
+        <Route path="/contact" element={
+          <Suspense fallback={<SmartLoadingSpinner />}>
+            <Contact />
+          </Suspense>
+        } />
+        <Route path="/portfolio" element={
+          <Suspense fallback={<SmartLoadingSpinner />}>
+            <Portfolio />
+          </Suspense>
+        } />
+        <Route path="/toolkit" element={
+          <Suspense fallback={<SmartLoadingSpinner />}>
+            <Toolkit />
+          </Suspense>
+        } />
+        <Route path="/privacy-policy" element={
+          <Suspense fallback={<SmartLoadingSpinner />}>
+            <PrivacyPolicy />
+          </Suspense>
+        } />
+        <Route path="/terms-of-service" element={
+          <Suspense fallback={<SmartLoadingSpinner />}>
+            <TermsOfService />
+          </Suspense>
+        } />
         {/* IMPORTANT: This catch-all must be the last one in this Routes block */}
-        <Route path="*" element={<NotFound />} /> 
+        <Route path="*" element={
+          <Suspense fallback={<SmartLoadingSpinner />}>
+            <NotFound />
+          </Suspense>
+        } /> 
       </Routes>
     </main>
     <Footer />
@@ -58,7 +91,11 @@ const App = () => {
           {/* This top-level Routes block determines which layout to use */}
           <Routes>
             {/* 1. Dedicated, Full-Screen Route for the Lander (No Nav/Footer) */}
-            <Route path="/waitlist" element={<Waitlist />} />
+            <Route path="/waitlist" element={
+              <Suspense fallback={<SmartLoadingSpinner />}>
+                <Waitlist />
+              </Suspense>
+            } />
 
             {/* 2. Main App Routes (with Nav/Footer) */}
             {/* The "*" path here means "catch everything else" */}

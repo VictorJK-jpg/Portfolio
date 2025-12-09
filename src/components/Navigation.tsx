@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react'; // Import Sun and Moon icons
+import { debouncedPrefetch } from '../utils/lazyLoading.tsx';
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -78,10 +79,26 @@ const Navigation = () => {
         {/* Desktop Navigation Links - Centered */}
         <div className="hidden md:flex flex-grow justify-center">
           <div className="flex gap-8">
-            <Link to="/about" className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200">About</Link>
-            <Link to="/toolkit" className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200">Toolkit</Link>
-            <Link to="/portfolio" className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200">My Work</Link>
-            <Link to="/contact" className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200">Contact</Link>
+            <Link 
+              to="/about" 
+              className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200"
+              onMouseEnter={() => debouncedPrefetch('/about')}
+            >About</Link>
+            <Link 
+              to="/toolkit" 
+              className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200"
+              onMouseEnter={() => debouncedPrefetch('/toolkit')}
+            >Toolkit</Link>
+            <Link 
+              to="/portfolio" 
+              className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200"
+              onMouseEnter={() => debouncedPrefetch('/portfolio')}
+            >My Work</Link>
+            <Link 
+              to="/contact" 
+              className="text-slate-900 hover:text-blue-600 text-sm font-medium transition-colors duration-200"
+              onMouseEnter={() => debouncedPrefetch('/contact')}
+            >Contact</Link>
           </div>
         </div>
 
@@ -129,10 +146,10 @@ const Navigation = () => {
             {darkMode ? <Sun size={24} /> : <Moon size={24} />}
           </button>
 
-          <Link to="/about" className="text-slate-900 hover:text-blue-600 text-lg font-medium py-2 w-full text-center" onClick={closeMobileMenu}>About</Link>
-          <Link to="/toolkit" className="text-slate-900 hover:text-blue-600 text-lg font-medium py-2 w-full text-center" onClick={closeMobileMenu}>Toolkit</Link>
-          <Link to="/portfolio" className="text-slate-900 hover:text-blue-600 text-lg font-medium py-2 w-full text-center" onClick={closeMobileMenu}>Portfolio</Link>
-          <Link to="/contact" className="text-slate-900 hover:text-blue-600 text-lg font-medium py-2 w-full text-center" onClick={closeMobileMenu}>Contact</Link>
+          <Link to="/about" className="text-slate-900 hover:text-blue-600 text-lg font-medium py-2 w-full text-center" onClick={closeMobileMenu} onMouseEnter={() => debouncedPrefetch('/about')}>About</Link>
+          <Link to="/toolkit" className="text-slate-900 hover:text-blue-600 text-lg font-medium py-2 w-full text-center" onClick={closeMobileMenu} onMouseEnter={() => debouncedPrefetch('/toolkit')}>Toolkit</Link>
+          <Link to="/portfolio" className="text-slate-900 hover:text-blue-600 text-lg font-medium py-2 w-full text-center" onClick={closeMobileMenu} onMouseEnter={() => debouncedPrefetch('/portfolio')}>Portfolio</Link>
+          <Link to="/contact" className="text-slate-900 hover:text-blue-600 text-lg font-medium py-2 w-full text-center" onClick={closeMobileMenu} onMouseEnter={() => debouncedPrefetch('/contact')}>Contact</Link>
         </div>
       )}
     </>
