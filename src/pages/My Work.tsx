@@ -72,11 +72,11 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto text-center">
           <AnimatedSection>
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-              My Work
+              Our Work
             </h1>
             <p className="text-xl text-[#94A3B8] max-w-3xl mx-auto leading-relaxed">
-              I build B2B marketing systems for large scale business that turn traffic into qualified pipeline. 
-              Here's how I've applied this approach across campaigns and clients.
+              We build B2B marketing systems for large scale business that turn traffic into qualified pipeline. 
+              Here's how we've applied this approach across campaigns and clients.
             </p>
           </AnimatedSection>
         </div>

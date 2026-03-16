@@ -13,9 +13,7 @@ import Footer from "./components/Footer";
 // Lazy load your page components for better performance
 const Home = lazy(() => import("./pages/Home"));
 const Portfolio = lazy(() => import("./pages/My Work"));
-const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Toolkit = lazy(() => import("./pages/Toolkit"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Lazy load legal pages
@@ -38,11 +36,6 @@ const MainLayout = () => (
             <Home />
           </Suspense>
         } />
-        <Route path="/about" element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <About />
-          </Suspense>
-        } />
         <Route path="/contact" element={
           <Suspense fallback={<div>Loading...</div>}>
             <Contact />
@@ -51,11 +44,6 @@ const MainLayout = () => (
         <Route path="/portfolio" element={
           <Suspense fallback={<div>Loading...</div>}>
             <Portfolio />
-          </Suspense>
-        } />
-        <Route path="/toolkit" element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Toolkit />
           </Suspense>
         } />
         <Route path="/privacy-policy" element={

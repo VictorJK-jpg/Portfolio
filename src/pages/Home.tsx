@@ -52,14 +52,14 @@ const FAQItem = ({ question, answer, isOpen, onClick }: {
   onClick: () => void;
 }) => {
   return (
-    <div className="bg-white dark:bg-[#1E293B] rounded-2xl p-6 mb-4 border border-[#E2E8F0] dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+    <div className="bg-gray-50 rounded-2xl p-6 mb-4 border border-gray-200 shadow-sm hover:shadow-md transition-all">
       <button
         onClick={onClick}
         className="w-full flex justify-between items-center text-left"
       >
-        <h3 className="text-xl font-semibold text-[#1E293B] dark:text-white pr-4">{question}</h3>
+        <h3 className="text-xl font-semibold text-[#1E293B] pr-4">{question}</h3>
         <ChevronDown 
-          className={`w-6 h-6 text-[#FF6B35] flex-shrink-0 transition-transform duration-300 ${
+          className={`w-6 h-6 text-[#1E293B] flex-shrink-0 transition-transform duration-300 ${
             isOpen ? 'rotate-180' : ''
           }`}
         />
@@ -69,7 +69,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }: {
           isOpen ? 'max-h-96 mt-4' : 'max-h-0'
         }`}
       >
-        <p className="text-base text-[#64748B] dark:text-gray-300 leading-relaxed">{answer}</p>
+        <p className="text-base text-gray-600 leading-relaxed">{answer}</p>
       </div>
     </div>
   );
@@ -99,7 +99,7 @@ const Home = () => {
     (async function () {
       const cal = await getCalApi({ namespace: "15min" });
       cal("ui", {
-        styles: { branding: { brandColor: "#FF6B35" } },
+        styles: { branding: { brandColor: "#1E293B" } },
         hideEventTypeDetails: false,
         layout: "month_view"
       });
@@ -121,11 +121,11 @@ const Home = () => {
     },
     {
       question: 'Do you run ads or just automation?',
-      answer: 'Both. I manage paid acquisition and build the automation systems that nurture leads into demos. Always full-funnel optimization.'
+      answer: 'Both. We manage paid acquisition and build the automation systems that nurture leads into demos. Always full-funnel optimization.'
     },
     {
       question: 'Who will I be working with?',
-      answer: 'You\'ll be working directly with me, Victor. No outsourcing, no junior staff. When you hire me, you get me.'
+      answer: 'You\'ll be working directly with our team. No outsourcing, no junior staff. When you hire us, you get our experts.'
     },
     {
       question: 'Do we own everything after?',
@@ -134,62 +134,83 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0F172A] transition-colors duration-300" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif' }}>
+    <div className="min-h-screen bg-white transition-colors duration-300" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif' }}>
       
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center px-6 lg:px-16 py-20">
-        <div className="max-w-4xl mx-auto w-full text-center">
+      <section className="min-h-screen flex items-center px-6 lg:px-16 py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-5xl mx-auto w-full">
           <AnimatedSection>
-            <h1 className="text-5xl lg:text-6xl font-bold text-[#1E293B] dark:text-white mb-6 leading-tight tracking-tight relative h-20">
-              {taglines.map((tagline, index) => (
-                <span
-                  key={index}
-                  className="absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out"
-                  style={{
-                    opacity: currentTaglineIndex === index ? 1 : 0,
-                  }}
-                >
-                  {tagline}
-                </span>
-              ))}
-            </h1>
-            <p className="text-lg text-[#64748B] dark:text-gray-300 mb-8 leading-relaxed font-normal max-w-2xl mx-auto">
-              I run marketing systems, sales systems, and funnels for business owners. Perfect for busy founders who need expertise without the overhead of a full team.
-            </p>
-            <button
-              onClick={scrollToContact}
-              className="bg-[#FF6B35] hover:bg-[#E85A2A] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-200 transform hover:scale-105"
-            >
-              Let's Talk
-            </button>
+            <div className="space-y-6 mb-12">
+              <h1 className="text-5xl lg:text-7xl font-bold text-[#1E293B] leading-tight tracking-tight relative lg:h-32 h-24">
+                {taglines.map((tagline, index) => (
+                  <span
+                    key={index}
+                    className="absolute inset-0 flex items-center transition-opacity duration-1000 ease-in-out"
+                    style={{
+                      opacity: currentTaglineIndex === index ? 1 : 0,
+                    }}
+                  >
+                    {tagline}
+                  </span>
+                ))}
+              </h1>
+                <div className="pt-8 lg:pt-16">
+              <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">
+                We run marketing systems, sales systems, and funnels for business owners. Perfect for busy founders who need expertise without the overhead of a full team.
+              </p>
+            </div>
+            </div>
+            <div className="flex flex-wrap gap-4 mb-16">
+              <button
+                onClick={scrollToContact}
+                className="bg-[#1E293B] hover:bg-[#0F172A] text-white px-8 py-4 text-base font-semibold rounded-lg transition-all duration-200"
+              >
+                Book a Call
+              </button>
+            </div>
+
+            <div className="grid grid-cols-3 gap-6 text-sm">
+              <div className="bg-gray-100 rounded-lg p-4 border border-gray-200">
+                <p className="text-gray-700 mb-1">✓ Email Marketing</p>
+                <p className="text-gray-600">Done-for-you campaigns</p>
+              </div>
+              <div className="bg-gray-100 rounded-lg p-4 border border-gray-200">
+                <p className="text-gray-700 mb-1">✓ Lead Generation</p>
+                <p className="text-gray-600">Qualified prospects</p>
+              </div>
+              <div className="bg-gray-100 rounded-lg p-4 border border-gray-200">
+                <p className="text-gray-700 mb-1">✓ Personalization</p>
+                <p className="text-gray-600">At unlimited scale</p>
+              </div>
+            </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Problem Section - iOS Card Style */}
-      <section className="py-20 px-6 lg:px-16 bg-[#F8FAFC] dark:bg-[#0F172A]">
+      <section className="py-20 px-6 lg:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-8 lg:p-12 shadow-xl border border-[#E2E8F0] dark:border-gray-700">
+          <div className="bg-gray-50 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-200">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               
               {/* Bold Question - Left */}
               <AnimatedSection>
-                <h2 className="text-4xl lg:text-5xl font-bold text-[#1E293B] dark:text-white leading-tight">
-                  You're getting traffic. But where are the demos?
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#1E293B] leading-tight">
+                  Scale Your Sending Power Without Scaling Your Budget
                 </h2>
               </AnimatedSection>
 
               {/* Description - Right */}
               <AnimatedSection delay={200}>
                 <div className="space-y-5">
-                  <p className="text-lg text-[#64748B] dark:text-gray-300 leading-relaxed">
-                    Most B2B companies have decent traffic and some inbound leads. But the leads just sit there.
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    Most teams use shared email infrastructure. That means poor deliverability, high bounce rates, and lost revenue.
                   </p>
-                  <p className="text-lg text-[#64748B] dark:text-gray-300 leading-relaxed">
-                    Your sales team chases cold prospects. Your nurture emails are generic. You're losing deals to competitors who stayed top-of-mind.
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    You need dedicated IP infrastructure. But that costs $1000s per month and takes weeks to set up.
                   </p>
-                  <p className="text-lg text-[#1E293B] dark:text-white font-semibold">
-                    The gap isn't your product. It's the system between "interested visitor" and "ready to buy."
+                  <p className="text-lg text-[#1E293B] font-semibold">
+                    We handle the infrastructure. You focus on selling.
                   </p>
                 </div>
               </AnimatedSection>
@@ -199,60 +220,64 @@ const Home = () => {
       </section>
 
       {/* What I Do - iOS Card Grid */}
-      <section className="py-20 px-6 lg:px-16 bg-white dark:bg-[#0F172A]">
+      <section className="py-20 px-6 lg:px-16 bg-[#0F172A]">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-4xl font-bold text-[#1E293B] dark:text-white mb-12 text-center">
-              I fix the gap between traffic and demos
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">
+              Email Automation Features
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-6">
-              {/* Service 1 */}
-              <div className="bg-[#F8FAFC] dark:bg-[#1E293B] rounded-3xl p-8 border border-[#E2E8F0] dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300">
-                <div className="w-14 h-14 bg-[#FF6B35] rounded-2xl flex items-center justify-center mb-6">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {/* Feature 1 */}
+              <div className="bg-[#1E293B] rounded-3xl p-8 border border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div className="w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#1E293B] dark:text-white mb-3">Email Automation</h3>
-                <p className="text-base text-[#64748B] dark:text-gray-300 mb-5 leading-relaxed">
-                  Sequences that nurture leads until they're ready to buy
+                <h3 className="text-xl font-bold text-white mb-3">Manual Domain & Inbox Setup</h3>
+                <p className="text-base text-gray-400 leading-relaxed">
+                  We handle all the technical setup for your sending domain so you get maximum deliverability
                 </p>
-                <div className="text-sm text-[#FF6B35] font-semibold">
-                  Perfect if: Your leads go cold after first contact
-                </div>
               </div>
 
-              {/* Service 2 */}
-              <div className="bg-[#F8FAFC] dark:bg-[#1E293B] rounded-3xl p-8 border border-[#E2E8F0] dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300">
-                <div className="w-14 h-14 bg-[#FF6B35] rounded-2xl flex items-center justify-center mb-6">
+              {/* Feature 2 */}
+              <div className="bg-[#1E293B] rounded-3xl p-8 border border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div className="w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#1E293B] dark:text-white mb-3">Conversion Funnels</h3>
-                <p className="text-base text-[#64748B] dark:text-gray-300 mb-5 leading-relaxed">
-                  Systems that qualify buyers automatically
+                <h3 className="text-xl font-bold text-white mb-3">Gmail & Outlook Supported</h3>
+                <p className="text-base text-gray-400 leading-relaxed">
+                  Works seamlessly with both Gmail and Outlook so your entire team can send
                 </p>
-                <div className="text-sm text-[#FF6B35] font-semibold">
-                  Perfect if: Your sales team wastes time on bad leads
-                </div>
               </div>
 
-              {/* Service 3 */}
-              <div className="bg-[#F8FAFC] dark:bg-[#1E293B] rounded-3xl p-8 border border-[#E2E8F0] dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300">
-                <div className="w-14 h-14 bg-[#FF6B35] rounded-2xl flex items-center justify-center mb-6">
+              {/* Feature 3 */}
+              <div className="bg-[#1E293B] rounded-3xl p-8 border border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div className="w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#1E293B] dark:text-white mb-3">Lead Scoring</h3>
-                <p className="text-base text-[#64748B] dark:text-gray-300 mb-5 leading-relaxed">
-                  Priority system so sales focuses on hot leads
+                <h3 className="text-xl font-bold text-white mb-3">Fast Turnaround</h3>
+                <p className="text-base text-gray-400 leading-relaxed">
+                  Get your first inbox live in under 24 hours, not weeks
                 </p>
-                <div className="text-sm text-[#FF6B35] font-semibold">
-                  Perfect if: You can't tell which leads are worth pursuing
+              </div>
+
+              {/* Feature 4 */}
+              <div className="bg-[#1E293B] rounded-3xl p-8 border border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div className="w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center mb-6">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
+                <h3 className="text-xl font-bold text-white mb-3">Done-For-You Service</h3>
+                <p className="text-base text-gray-400 leading-relaxed">
+                  We handle everything. You focus on the business
+                </p>
               </div>
             </div>
 
@@ -261,34 +286,34 @@ const Home = () => {
       </section>
 
       {/* Stats Section - iOS Style */}
-      <section className="py-20 px-6 lg:px-16 bg-[#F8FAFC] dark:bg-[#0F172A]">
+      <section className="py-20 px-6 lg:px-16 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-3xl font-bold text-[#1E293B] dark:text-white mb-12 text-center">
+            <h2 className="text-3xl font-bold text-[#1E293B] mb-12 text-center">
               Results for clients who implement these systems
             </h2>
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-8 border border-[#E2E8F0] dark:border-gray-700 shadow-sm hover:shadow-xl transition-all">
+            <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all">
               <div className="text-center">
-                <div className="text-6xl font-bold text-[#FF6B35] mb-3">85%</div>
-                <p className="text-lg text-[#1E293B] dark:text-white font-semibold mb-1">More qualified leads</p>
-                <p className="text-sm text-[#64748B] dark:text-gray-400">Better scoring & nurturing</p>
+                <div className="text-6xl font-bold text-[#1E293B] mb-3">85%</div>
+                <p className="text-lg text-[#1E293B] font-semibold mb-1">More qualified leads</p>
+                <p className="text-sm text-gray-600">Better scoring & nurturing</p>
               </div>
             </div>
-            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-8 border border-[#E2E8F0] dark:border-gray-700 shadow-sm hover:shadow-xl transition-all">
+            <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all">
               <div className="text-center">
-                <div className="text-6xl font-bold text-[#FF6B35] mb-3">3.2x</div>
-                <p className="text-lg text-[#1E293B] dark:text-white font-semibold mb-1">Marketing ROI</p>
-                <p className="text-sm text-[#64748B] dark:text-gray-400">From funnel optimization</p>
+                <div className="text-6xl font-bold text-[#1E293B] mb-3">3.2x</div>
+                <p className="text-lg text-[#1E293B] font-semibold mb-1">Marketing ROI</p>
+                <p className="text-sm text-gray-600">From funnel optimization</p>
               </div>
             </div>
-            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-8 border border-[#E2E8F0] dark:border-gray-700 shadow-sm hover:shadow-xl transition-all">
+            <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all">
               <div className="text-center">
-                <div className="text-6xl font-bold text-[#FF6B35] mb-3">60%</div>
-                <p className="text-lg text-[#1E293B] dark:text-white font-semibold mb-1">Shorter sales cycle</p>
-                <p className="text-sm text-[#64748B] dark:text-gray-400">First touch to close</p>
+                <div className="text-6xl font-bold text-[#1E293B] mb-3">60%</div>
+                <p className="text-lg text-[#1E293B] font-semibold mb-1">Shorter sales cycle</p>
+                <p className="text-sm text-gray-600">First touch to close</p>
               </div>
             </div>
           </div>
@@ -296,56 +321,56 @@ const Home = () => {
       </section>
 
       {/* Process - iOS Cards */}
-      <section className="py-20 px-6 lg:px-16 bg-white dark:bg-[#0F172A]">
+      <section className="py-20 px-6 lg:px-16 bg-[#0F172A]">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-4xl font-bold text-[#1E293B] dark:text-white mb-12 text-center">
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">
               How we work together
             </h2>
             
             <div className="space-y-6">
-              <div className="bg-[#F8FAFC] dark:bg-[#1E293B] rounded-3xl p-8 border border-[#E2E8F0] dark:border-gray-700 shadow-sm hover:shadow-xl transition-all">
+              <div className="bg-[#1E293B] rounded-3xl p-8 border border-gray-700 shadow-sm hover:shadow-xl transition-all">
                 <div className="flex gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-[#FF6B35] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-white font-bold text-lg">
                       1
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#1E293B] dark:text-white mb-2">Audit</h3>
-                    <p className="text-base text-[#64748B] dark:text-gray-300 leading-relaxed">
-                      I analyze your funnel, traffic, and conversion points. Find the gaps. Takes 1-2 weeks.
+                    <h3 className="text-xl font-bold text-white mb-2">Audit</h3>
+                    <p className="text-base text-gray-300 leading-relaxed">
+                      We analyze your funnel, traffic, and conversion points. Find the gaps. Takes 1-2 weeks.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-[#F8FAFC] dark:bg-[#1E293B] rounded-3xl p-8 border border-[#E2E8F0] dark:border-gray-700 shadow-sm hover:shadow-xl transition-all">
+              <div className="bg-[#1E293B] rounded-3xl p-8 border border-gray-700 shadow-sm hover:shadow-xl transition-all">
                 <div className="flex gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-[#FF6B35] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-white font-bold text-lg">
                       2
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#1E293B] dark:text-white mb-2">Build</h3>
-                    <p className="text-base text-[#64748B] dark:text-gray-300 leading-relaxed">
-                      I build the systems. Email sequences, landing pages, automation flows, tracking. You approve, I execute.
+                    <h3 className="text-xl font-bold text-white mb-2">Build</h3>
+                    <p className="text-base text-gray-300 leading-relaxed">
+                      We build the systems. Email sequences, landing pages, automation flows, tracking. You approve, we execute.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-[#F8FAFC] dark:bg-[#1E293B] rounded-3xl p-8 border border-[#E2E8F0] dark:border-gray-700 shadow-sm hover:shadow-xl transition-all">
+              <div className="bg-[#1E293B] rounded-3xl p-8 border border-gray-700 shadow-sm hover:shadow-xl transition-all">
                 <div className="flex gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-[#FF6B35] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-white font-bold text-lg">
                       3
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#1E293B] dark:text-white mb-2">Optimize</h3>
-                    <p className="text-base text-[#64748B] dark:text-gray-300 leading-relaxed">
+                    <h3 className="text-xl font-bold text-white mb-2">Optimize</h3>
+                    <p className="text-base text-gray-300 leading-relaxed">
                       We launch, measure what works, kill what doesn't, scale the winners.
                     </p>
                   </div>
@@ -357,19 +382,19 @@ const Home = () => {
       </section>
 
       {/* Client Testimonial - iOS Card */}
-      <section className="py-20 px-6 lg:px-16 bg-[#F8FAFC] dark:bg-[#0F172A]">
+      <section className="py-20 px-6 lg:px-16 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto">
           
-          <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-8 lg:p-12 shadow-xl border border-[#E2E8F0] dark:border-gray-700">
+          <div className="bg-[#1E293B] rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-700">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               
               {/* Left - Heading */}
               <div className="lg:col-span-3">
                 <AnimatedSection>
-                  <h2 className="text-5xl font-bold text-[#1E293B] dark:text-white mb-4">
+                  <h2 className="text-5xl font-bold text-white mb-4">
                     Clients
                   </h2>
-                  <p className="text-base text-[#64748B] dark:text-gray-300">
+                  <p className="text-base text-gray-300">
                     Feedback from people we've worked with.
                   </p>
                 </AnimatedSection>
@@ -378,7 +403,7 @@ const Home = () => {
               {/* Middle - Client photo */}
               <div className="lg:col-span-4">
                 <AnimatedSection delay={100}>
-                  <div className="bg-gradient-to-br from-[#2D3748] to-[#1E293B] dark:from-gray-700 dark:to-gray-800 rounded-3xl overflow-hidden aspect-[3/4] shadow-lg">
+                  <div className="bg-gradient-to-br from-[#2D3748] to-[#1E293B] rounded-3xl overflow-hidden aspect-[3/4] shadow-lg">
                     <img 
                       src="/images/testimonials/carl-photo.png" 
                       alt="Carl S., Co-founder at Adsome" 
@@ -394,24 +419,24 @@ const Home = () => {
                   <div className="space-y-5">
                     {/* Company name */}
                     <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 bg-[#FF6B35] rounded-lg"></div>
-                      <span className="text-lg font-semibold text-[#1E293B] dark:text-white">Adsome</span>
+                      <div className="w-6 h-6 bg-white rounded-lg"></div>
+                      <span className="text-lg font-semibold text-white">Adsome</span>
                     </div>
 
                     {/* Testimonial text */}
-                    <h3 className="text-2xl font-bold text-[#1E293B] dark:text-white leading-tight">
+                    <h3 className="text-2xl font-bold text-white leading-tight">
                       Victor ran our lead enrichment systems. He also managed the funnels, SEO strategy, and tracking processes.
                     </h3>
 
-                    <p className="text-base text-[#64748B] dark:text-gray-300 leading-relaxed">
+                    <p className="text-base text-gray-300 leading-relaxed">
                       His approach was always based off delivering quality and great advice along the way which helped us greatly as a startup.
                       He was always available to help and very communicative.
                     </p>
 
                     {/* Author info */}
                     <div className="pt-3">
-                      <p className="text-base font-semibold text-[#1E293B] dark:text-white">Carl S.</p>
-                      <p className="text-sm text-[#64748B] dark:text-gray-300">Co-founder at Adsome</p>
+                      <p className="text-base font-semibold text-white">Carl S.</p>
+                      <p className="text-sm text-gray-400">Co-founder at Adsome</p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -422,42 +447,42 @@ const Home = () => {
       </section>
 
       {/* Who this is for - iOS Card */}
-      <section className="py-20 px-6 lg:px-16 bg-white dark:bg-[#0F172A]">
+      <section className="py-20 px-6 lg:px-16 bg-[#0F172A]">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
-            <div className="bg-[#F8FAFC] dark:bg-[#1E293B] rounded-3xl p-8 lg:p-12 shadow-xl border border-[#E2E8F0] dark:border-gray-700">
-              <h2 className="text-4xl font-bold text-[#1E293B] dark:text-white mb-8">
+            <div className="bg-[#1E293B] rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-700">
+              <h2 className="text-4xl font-bold text-white mb-8">
                 Who I work with
               </h2>
               
-              <p className="text-xl text-[#64748B] dark:text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 B2B businesses with a marketing budget who have these problems:
               </p>
 
               <div className="space-y-4">
-                <div className="flex items-start gap-4 bg-white dark:bg-[#0F172A] rounded-2xl p-4 border border-[#E2E8F0] dark:border-gray-700">
-                  <Check className="w-6 h-6 text-[#FF6B35] mt-0.5 flex-shrink-0" />
-                  <p className="text-base text-[#64748B] dark:text-gray-300">Traffic but terrible conversion rates</p>
+                <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
+                  <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
+                  <p className="text-base text-gray-300">Traffic but terrible conversion rates</p>
                 </div>
-                <div className="flex items-start gap-4 bg-white dark:bg-[#0F172A] rounded-2xl p-4 border border-[#E2E8F0] dark:border-gray-700">
-                  <Check className="w-6 h-6 text-[#FF6B35] mt-0.5 flex-shrink-0" />
-                  <p className="text-base text-[#64748B] dark:text-gray-300">Sales team chasing unqualified leads</p>
+                <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
+                  <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
+                  <p className="text-base text-gray-300">Sales team chasing unqualified leads</p>
                 </div>
-                <div className="flex items-start gap-4 bg-white dark:bg-[#0F172A] rounded-2xl p-4 border border-[#E2E8F0] dark:border-gray-700">
-                  <Check className="w-6 h-6 text-[#FF6B35] mt-0.5 flex-shrink-0" />
-                  <p className="text-base text-[#64748B] dark:text-gray-300">Can't track ads back to closed deals</p>
+                <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
+                  <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
+                  <p className="text-base text-gray-300">Can't track ads back to closed deals</p>
                 </div>
-                <div className="flex items-start gap-4 bg-white dark:bg-[#0F172A] rounded-2xl p-4 border border-[#E2E8F0] dark:border-gray-700">
-                  <Check className="w-6 h-6 text-[#FF6B35] mt-0.5 flex-shrink-0" />
-                  <p className="text-base text-[#64748B] dark:text-gray-300">Email nurture is broken or doesn't exist</p>
+                <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
+                  <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
+                  <p className="text-base text-gray-300">Email nurture is broken or doesn't exist</p>
                 </div>
-                <div className="flex items-start gap-4 bg-white dark:bg-[#0F172A] rounded-2xl p-4 border border-[#E2E8F0] dark:border-gray-700">
-                  <Check className="w-6 h-6 text-[#FF6B35] mt-0.5 flex-shrink-0" />
-                  <p className="text-base text-[#64748B] dark:text-gray-300">Need marketing systems but can't afford a full team</p>
+                <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
+                  <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
+                  <p className="text-base text-gray-300">Need marketing systems but can't afford a full team</p>
                 </div>
               </div>
 
-              <p className="text-base text-[#64748B] dark:text-gray-300 italic mt-8">
+              <p className="text-base text-gray-400 italic mt-8">
                 If you're pre-PMF, enterprise-focused with 18+ month sales cycles, or want brand/creative work, I'm not the right fit.
               </p>
             </div>
@@ -466,27 +491,27 @@ const Home = () => {
       </section>
 
       {/* CTA with Calendar - iOS Card */}
-      <section className="py-20 px-6 lg:px-16 bg-[#F8FAFC] dark:bg-[#0F172A]">
+      <section className="py-20 px-6 lg:px-16 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-8 lg:p-12 shadow-xl border border-[#E2E8F0] dark:border-gray-700">
+          <div className="bg-[#1E293B] rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-700">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               
               {/* Text */}
               <AnimatedSection>
-                <h2 className="text-4xl font-bold text-[#1E293B] dark:text-white mb-6">
+                <h2 className="text-4xl font-bold text-white mb-6">
                   Let's talk
                 </h2>
-                <p className="text-xl text-[#64748B] dark:text-gray-300 mb-6">
+                <p className="text-xl text-gray-300 mb-6">
                   Book a 15-minute call. I'll audit your funnel and tell you what's broken.
                 </p>
-                <p className="text-base text-[#64748B] dark:text-gray-300 mb-8">
+                <p className="text-base text-gray-300 mb-8">
                   I take on 2 projects per month. If I'm a fit, we'll start in 2-4 weeks.
                 </p>
                 
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-[#FF6B35]" />
-                    <a href="mailto:victor@victorseda.xyz" className="text-[#FF6B35] hover:text-[#E85A2A] text-base font-medium">
+                    <Mail className="w-5 h-5 text-white" />
+                    <a href="mailto:victor@victorseda.xyz" className="text-white hover:text-gray-300 text-base font-medium">
                       victor@victorseda.xyz
                     </a>
                   </div>
@@ -495,24 +520,24 @@ const Home = () => {
 
               {/* Calendar Button */}
               <AnimatedSection delay={200}>
-                <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] dark:from-[#0F172A] dark:to-[#1E293B] rounded-3xl p-8 border-2 border-[#FF6B35]/30 shadow-2xl">
+                <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-3xl p-8 border-2 border-gray-700 shadow-2xl">
                   <div className="text-center space-y-6">
-                    <div className="w-20 h-20 bg-[#FF6B35] rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-20 h-20 bg-white rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                      <svg className="w-10 h-10 text-[#0F172A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">
                       Book Your Free Audit Call
                     </h3>
-                    <p className="text-base text-[#94A3B8] mb-6">
+                    <p className="text-base text-gray-400 mb-6">
                       Choose a time that works for you
                     </p>
                     <button
                       data-cal-namespace="15min"
                       data-cal-link="victorseda/15min"
                       data-cal-config='{"layout":"month_view"}'
-                      className="w-full bg-[#FF6B35] hover:bg-[#E85A2A] text-white px-8 py-4 text-base font-semibold rounded-full shadow-lg transition-all duration-200 transform hover:scale-105"
+                      className="w-full bg-white hover:bg-gray-100 text-[#0F172A] px-8 py-4 text-base font-semibold rounded-full shadow-lg transition-all duration-200 transform hover:scale-105"
                     >
                       Select a Time Slot
                     </button>
@@ -525,10 +550,10 @@ const Home = () => {
       </section>
 
       {/* FAQ with Accordion - iOS Cards */}
-      <section className="py-20 px-6 lg:px-16 bg-white dark:bg-[#0F172A]">
+      <section className="py-20 px-6 lg:px-16 bg-white">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-4xl font-bold text-[#1E293B] dark:text-white mb-12 text-center">
+            <h2 className="text-4xl font-bold text-[#1E293B] mb-12 text-center">
               FAQ
             </h2>
           </AnimatedSection>
