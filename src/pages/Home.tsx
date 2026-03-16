@@ -81,8 +81,8 @@ const Home = () => {
 
   // Rotating taglines
   const taglines = [
-    "B2B Marketing Automation That Actually Works",
-    "SEO for Agencies", 
+    "We Automate the Work. You Run the Business.",
+    "Automation Systems for Growing Agencies",
   ];
 
   // Rotate taglines every 6 seconds (allowing 1s fade out, 4s display, 1s fade in)
@@ -112,24 +112,24 @@ const Home = () => {
 
   const faqs = [
     {
-      question: 'Do you work with early-stage startups?',
-      answer: 'If you\'re pre-product-market fit or have less than $5k in marketing budget, we\'re probably not the right fit. You need to validate your offer first.'
+      question: 'Do you work with early-stage businesses?',
+      answer: 'If you don\'t have a proven offer and consistent revenue yet, we\'re probably not the right fit. Automation amplifies what\'s already working. It doesn\'t fix a broken business model.'
     },
     {
-      question: 'How long until we see results?',
-      answer: 'Setup takes 2-4 weeks. You\'ll start seeing data within 30 days. Real pipeline impact shows up around 60-90 days once we have enough data.'
+      question: 'How long until our automations are live?',
+      answer: 'Most systems are scoped and built within 2 to 4 weeks. Complex multi-system builds take longer, but we move fast and keep you updated at every stage.'
     },
     {
-      question: 'Do you run ads or just automation?',
-      answer: 'Both. We manage paid acquisition and build automation systems that nurture prospects into demos. Always full-funnel optimization.'
+      question: 'What kind of automations do you build?',
+      answer: 'Outbound systems, lead generation pipelines, CRM workflows, onboarding sequences, reporting dashboards, content pipelines, and more. If it\'s repetitive and eats your team\'s time, we can probably automate it.'
     },
     {
       question: 'Who will I be working with?',
-      answer: 'You\'ll be working directly with our team. No outsourcing, no junior staff. When you hire us, you get our experts.'
+      answer: 'You work directly with our team. No outsourcing, no juniors handling your account. When you hire us, you get our full attention.'
     },
     {
       question: 'Do we own everything after?',
-      answer: 'Yes. Full ownership of all strategies, automation flows, campaign assets, and documentation.'
+      answer: 'Yes. Full ownership of all systems, workflows, documentation, and assets. Everything is handed over and yours to keep.'
     }
   ];
 
@@ -156,7 +156,7 @@ const Home = () => {
               </h1>
                 <div className="pt-8 lg:pt-16">
               <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">
-                We run marketing systems, sales systems, and funnels for business owners. Perfect for busy founders who need expertise without the overhead of a full team.
+                We build automation systems that replace manual work across your sales, marketing, and operations. Built for agency owners and founders who are done doing everything by hand.
               </p>
             </div>
             </div>
@@ -171,16 +171,16 @@ const Home = () => {
 
             <div className="grid grid-cols-3 gap-6 text-sm">
               <div className="bg-gray-100 rounded-lg p-4 border border-gray-200">
-                <p className="text-gray-700 mb-1">✓ Email Marketing</p>
-                <p className="text-gray-600">Done-for-you campaigns</p>
+                <p className="text-gray-700 mb-1">✓ Outbound Automation</p>
+                <p className="text-gray-600">Cold email systems that run themselves</p>
               </div>
               <div className="bg-gray-100 rounded-lg p-4 border border-gray-200">
-                <p className="text-gray-700 mb-1">✓ Prospect Generation</p>
-                <p className="text-gray-600">Qualified prospects</p>
+                <p className="text-gray-700 mb-1">✓ Lead Generation</p>
+                <p className="text-gray-600">Automated pipelines feeding your CRM</p>
               </div>
               <div className="bg-gray-100 rounded-lg p-4 border border-gray-200">
-                <p className="text-gray-700 mb-1">✓ Personalization</p>
-                <p className="text-gray-600">At unlimited scale</p>
+                <p className="text-gray-700 mb-1">✓ Ops & Workflow Automation</p>
+                <p className="text-gray-600">Cut manual work across your entire business</p>
               </div>
             </div>
           </AnimatedSection>
@@ -196,7 +196,7 @@ const Home = () => {
               {/* Bold Question - Left */}
               <AnimatedSection>
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#1E293B] leading-tight">
-                  Scale Your Sending Power Without Scaling Your Budget
+                  Your Team Should Be Closing, Not Copy-Pasting
                 </h2>
               </AnimatedSection>
 
@@ -204,13 +204,13 @@ const Home = () => {
               <AnimatedSection delay={200}>
                 <div className="space-y-5">
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    Most teams use shared email infrastructure. That means poor deliverability, high bounce rates, and lost revenue.
+                    Most agencies are bleeding hours on tasks that shouldn't require a human. Manual follow-ups, lead research, reporting, onboarding — all of it slowing you down.
                   </p>
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    You need dedicated IP infrastructure. But that costs $1000s per month and takes weeks to set up.
+                    Building automation in-house takes time you don't have and expertise that's expensive to hire for.
                   </p>
                   <p className="text-lg text-[#1E293B] font-semibold">
-                    We handle the infrastructure. You focus on selling.
+                    We build the systems. You get your time back.
                   </p>
                 </div>
               </AnimatedSection>
@@ -224,7 +224,7 @@ const Home = () => {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
             <h2 className="text-4xl font-bold text-white mb-12 text-center">
-              Email Automation Features
+              What We Build
             </h2>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -235,9 +235,9 @@ const Home = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Manual Domain & Inbox Setup</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Outbound & Cold Email Systems</h3>
                 <p className="text-base text-gray-400 leading-relaxed">
-                  We handle all the technical setup for your sending domain so you get maximum deliverability
+                  Full cold email infrastructure, domain setup, copy, and sequences — built to land in inboxes and book calls on autopilot
                 </p>
               </div>
 
@@ -248,9 +248,9 @@ const Home = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Gmail & Outlook Supported</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Lead Generation Pipelines</h3>
                 <p className="text-base text-gray-400 leading-relaxed">
-                  Works seamlessly with both Gmail and Outlook so your entire team can send
+                  Automated scraping, enrichment, and delivery of qualified leads straight into your CRM or outreach tool
                 </p>
               </div>
 
@@ -261,9 +261,9 @@ const Home = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Fast Turnaround</h3>
+                <h3 className="text-xl font-bold text-white mb-3">CRM & Ops Workflows</h3>
                 <p className="text-base text-gray-400 leading-relaxed">
-                  Get your first inbox live in under 24 hours, not weeks
+                  Connect your tools, eliminate manual data entry, and keep your pipeline moving without anyone babysitting it
                 </p>
               </div>
 
@@ -274,9 +274,9 @@ const Home = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Done-For-You Service</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Done-For-You, Start to Finish</h3>
                 <p className="text-base text-gray-400 leading-relaxed">
-                  We handle everything. You focus on the business
+                  We scope, build, and hand over fully documented systems. No tutorials, no DIY. Just working automation delivered to you
                 </p>
               </div>
             </div>
@@ -290,30 +290,30 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
             <h2 className="text-3xl font-bold text-[#1E293B] mb-12 text-center">
-              Results for clients who implement these systems
+              What automation actually does to your numbers
             </h2>
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all">
               <div className="text-center">
-                <div className="text-6xl font-bold text-[#1E293B] mb-3">85%</div>
-                <p className="text-lg text-[#1E293B] font-semibold mb-1">More qualified prospects</p>
-                <p className="text-sm text-gray-600">Better scoring & automation</p>
+                <div className="text-6xl font-bold text-[#1E293B] mb-3">80%</div>
+                <p className="text-lg text-[#1E293B] font-semibold mb-1">Less manual work</p>
+                <p className="text-sm text-gray-600">Across sales, ops, and reporting</p>
               </div>
             </div>
             <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all">
               <div className="text-center">
-                <div className="text-6xl font-bold text-[#1E293B] mb-3">3.2x</div>
-                <p className="text-lg text-[#1E293B] font-semibold mb-1">Marketing ROI</p>
-                <p className="text-sm text-gray-600">From funnel optimization</p>
+                <div className="text-6xl font-bold text-[#1E293B] mb-3">3x</div>
+                <p className="text-lg text-[#1E293B] font-semibold mb-1">More outreach volume</p>
+                <p className="text-sm text-gray-600">Without adding headcount</p>
               </div>
             </div>
             <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all">
               <div className="text-center">
-                <div className="text-6xl font-bold text-[#1E293B] mb-3">60%</div>
-                <p className="text-lg text-[#1E293B] font-semibold mb-1">Shorter sales cycle</p>
-                <p className="text-sm text-gray-600">First touch to close</p>
+                <div className="text-6xl font-bold text-[#1E293B] mb-3">2–4w</div>
+                <p className="text-lg text-[#1E293B] font-semibold mb-1">Average build time</p>
+                <p className="text-sm text-gray-600">From scoping call to live system</p>
               </div>
             </div>
           </div>
@@ -337,9 +337,9 @@ const Home = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Audit</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">Scope</h3>
                     <p className="text-base text-gray-300 leading-relaxed">
-                      We analyze your funnel, traffic, and conversion points. Find the gaps. Takes 1-2 weeks.
+                      We audit your current workflow, identify what's eating the most time, and map out exactly what gets automated and how.
                     </p>
                   </div>
                 </div>
@@ -355,7 +355,7 @@ const Home = () => {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">Build</h3>
                     <p className="text-base text-gray-300 leading-relaxed">
-                      We build the systems. Email sequences, landing pages, automation flows, tracking. You approve, we execute.
+                      We build and test every system before it goes live. You review, we refine, and nothing ships until it works exactly as scoped.
                     </p>
                   </div>
                 </div>
@@ -369,9 +369,9 @@ const Home = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Optimize</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">Hand Off</h3>
                     <p className="text-base text-gray-300 leading-relaxed">
-                      We launch, measure what works, kill what doesn't, scale the winners.
+                      You get the system, full documentation, and a walkthrough. It's yours. We stay available for support and future builds.
                     </p>
                   </div>
                 </div>
@@ -382,13 +382,12 @@ const Home = () => {
       </section>
 
       {/* Client Testimonial - iOS Card */}
-      <section className="py-20 px-6 lg:px-16 bg-[#0F172A]">
+      {/* <section className="py-20 px-6 lg:px-16 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto">
           
           <div className="bg-[#1E293B] rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-700">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               
-              {/* Left - Heading */}
               <div className="lg:col-span-3">
                 <AnimatedSection>
                   <h2 className="text-5xl font-bold text-white mb-4">
@@ -400,7 +399,6 @@ const Home = () => {
                 </AnimatedSection>
               </div>
 
-              {/* Middle - Client photo */}
               <div className="lg:col-span-4">
                 <AnimatedSection delay={100}>
                   <div className="bg-gradient-to-br from-[#2D3748] to-[#1E293B] rounded-3xl overflow-hidden aspect-[3/4] shadow-lg">
@@ -413,27 +411,20 @@ const Home = () => {
                 </AnimatedSection>
               </div>
 
-              {/* Right - Testimonial */}
               <div className="lg:col-span-5">
                 <AnimatedSection delay={200}>
                   <div className="space-y-5">
-                    {/* Company name */}
                     <div className="flex items-center gap-3">
                       <div className="w-6 h-6 bg-white rounded-lg"></div>
                       <span className="text-lg font-semibold text-white">Adsome</span>
                     </div>
-
-                    {/* Testimonial text */}
                     <h3 className="text-2xl font-bold text-white leading-tight">
                       Victor ran our lead enrichment systems. He also managed the funnels, SEO strategy, and tracking processes.
                     </h3>
-
                     <p className="text-base text-gray-300 leading-relaxed">
                       His approach was always based off delivering quality and great advice along the way which helped us greatly as a startup.
                       He was always available to help and very communicative.
                     </p>
-
-                    {/* Author info */}
                     <div className="pt-3">
                       <p className="text-base font-semibold text-white">Carl S.</p>
                       <p className="text-sm text-gray-400">Co-founder at Adsome</p>
@@ -444,7 +435,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Who this is for - iOS Card */}
       <section className="py-20 px-6 lg:px-16 bg-[#0F172A]">
@@ -452,38 +443,38 @@ const Home = () => {
           <AnimatedSection>
             <div className="bg-[#1E293B] rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-700">
               <h2 className="text-4xl font-bold text-white mb-8">
-                Who I work with
+                Who we work with
               </h2>
               
               <p className="text-xl text-gray-300 mb-8">
-                B2B businesses with a marketing budget who have these problems:
+                Agencies and B2B businesses that are growing and need their systems to keep up:
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
                   <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
-                  <p className="text-base text-gray-300">Traffic but terrible conversion rates</p>
+                  <p className="text-base text-gray-300">Doing outreach manually and running out of capacity</p>
                 </div>
                 <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
                   <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
-                  <p className="text-base text-gray-300">Sales team chasing unqualified prospects</p>
+                  <p className="text-base text-gray-300">Losing leads because follow-up falls through the cracks</p>
                 </div>
                 <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
                   <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
-                  <p className="text-base text-gray-300">Can't track ads back to closed deals</p>
+                  <p className="text-base text-gray-300">Spending hours on reporting and data that should update itself</p>
                 </div>
                 <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
                   <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
-                  <p className="text-base text-gray-300">Email nurture is broken or doesn't exist</p>
+                  <p className="text-base text-gray-300">Tools that don't talk to each other and a team working around the gaps</p>
                 </div>
                 <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
                   <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
-                  <p className="text-base text-gray-300">Need marketing systems but can't afford a full team</p>
+                  <p className="text-base text-gray-300">Ready to scale but not ready to double headcount</p>
                 </div>
               </div>
 
               <p className="text-base text-gray-400 italic mt-8">
-                If you're pre-PMF, enterprise-focused with 18+ month sales cycles, or want brand/creative work, I'm not the right fit.
+                If you're pre-revenue, looking for brand work, or want someone to manage your ads, we're not the right fit.
               </p>
             </div>
           </AnimatedSection>
@@ -502,17 +493,16 @@ const Home = () => {
                   Let's talk
                 </h2>
                 <p className="text-xl text-gray-300 mb-6">
-                  Book a 15-minute call. We'll audit your funnel and tell you what's broken.
+                  Book a 15-minute call. We'll look at your current workflow and show you exactly where automation fits.
                 </p>
                 <p className="text-base text-gray-300 mb-8">
-                  We take on 2 projects per month. If we're a fit, we'll start in 2-4 weeks.
+                  We take on a limited number of projects each month. If we're a fit, we can start within 2 weeks.
                 </p>
                 
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-white" />
-                    <a href="mailto:hello@agency.com" className="text-white hover:text-gray-300 text-base font-medium">
-                      hello@agency.com
+                    <a href="mailto:victor@victorseda.xyz" className="text-white hover:text-gray-300 text-base font-medium">
                       victor@victorseda.xyz
                     </a>
                   </div>
@@ -529,10 +519,10 @@ const Home = () => {
                       </svg>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">
-                      Book Your Free Audit Call
+                      Book a Free Strategy Call
                     </h3>
                     <p className="text-base text-gray-400 mb-6">
-                      Choose a time that works for you
+                      Pick a time and let's map out your automation
                     </p>
                     <button
                       data-cal-namespace="15min"
