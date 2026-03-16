@@ -16,9 +16,16 @@ const Toolkit = () => {
       linkTo: 'mailto:victor@victorseda.xyz'
     },
     {
-      title: 'Lead Generation & Nurturing',
-      description: 'Streamulate lead capture, qualification, and follow-up processes with automated email outreach and CRM integrations.',
+      title: 'Email & Marketing Automation',
+      description: 'Automate email sequences, follow-ups, and marketing campaigns with advanced workflow systems.',
       icon: Users,
+      linkText: 'Request Workflows',
+      linkTo: 'mailto:victor@victorseda.xyz'
+    },
+    {
+      title: 'AI-Powered Automation Workflows',
+      description: 'Leverage advanced AI models for tasks like data analysis, and personalized customer interactions.',
+      icon: Bot,
       linkText: 'Request Workflows',
       linkTo: 'mailto:victor@victorseda.xyz'
     },
@@ -33,8 +40,8 @@ const Toolkit = () => {
       title: 'Sales & CRM Automation',
       description: 'Automate CRM updates, sales pipeline management, and e-commerce order processing for improved efficiency.',
       icon: DollarSign,
-      linkText: 'Request Workflows',
-      linkTo: 'mailto:victor@victorseda.xyz'
+      linkText: 'Get Started',
+      linkTo: '/contact'
     },
     {
       title: 'Reporting & Analytics Automation',
@@ -69,10 +76,10 @@ const Toolkit = () => {
           <AnimatedSection>
             <div className="text-center">
               <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Systems I Use
+                Systems We Use
               </h1>
               <p className="text-xl text-[#94A3B8] max-w-3xl mx-auto leading-relaxed">
-                This is where I share the powerful, raw AI and automation workflows I've built and gathered. These aren't plug-and-play apps; they're the blueprints of systems designed for serious growth. Take a look what's possible, and if you're ready to implement them for your business, you can quickly download them.
+                This is where we share the powerful, raw AI and automation workflows we've built and gathered. These aren't plug-and-play apps; they're the blueprints of systems designed for serious growth. Take a look what's possible, and if you're ready to implement them for your business, you can quickly download them.
               </p>
             </div>
           </AnimatedSection>
@@ -148,7 +155,7 @@ const Toolkit = () => {
                   Need This AI Content Engine Set Up for Your Business?
                 </h3>
                 <p className="text-lg text-[#64748B] dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Implementing this system requires deep expertise in n8n, AI integrations, and workflow optimization. I can package and customize this entire engine for your specific agency or brand, ensuring it runs flawlessly and delivers consistent results.
+                  Implementing this system requires deep expertise in n8n, AI integrations, and workflow optimization. We can package and customize this entire engine for your specific agency or brand, ensuring it runs flawlessly and delivers consistent results.
                 </p>
                 <Link
                   to="/contact"
@@ -188,7 +195,7 @@ const Toolkit = () => {
                   Want This High-Converting Flow Implemented for You?
                 </h3>
                 <p className="text-lg text-[#64748B] dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Whatever your marketing needs are, I can build and optimize this entire welcome flow specifically for your audience and goals.
+                  Whatever your marketing needs are, we can build and optimize this entire welcome flow specifically for your audience and goals.
                 </p>
                 <Link
                   to="/contact"
@@ -239,7 +246,7 @@ const Toolkit = () => {
                   Want This Funnel Customized & Integrated for Your Business?
                 </h3>
                 <p className="text-lg text-[#64748B] dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                  I can rewrite this LinkedIn strategy and funnel to your specific target audience, refine the messaging for maximum response, so it fits easily into your existing sales process.
+                  We can rewrite this LinkedIn strategy and funnel to your specific target audience, refine messaging for maximum response, so it fits easily into your existing sales process.
                 </p>
                 <Link
                   to="/contact"
@@ -255,7 +262,7 @@ const Toolkit = () => {
           <AnimatedSection delay={400}>
             <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-8 lg:p-12 shadow-xl border border-[#E2E8F0] dark:border-gray-700">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1E293B] dark:text-white mb-10 text-center">
-                My n8n Workflow Blueprints
+                Our n8n Workflow Blueprints
               </h2>
 
               {Object.keys(groupedWorkflows).map((categoryTitle, index) => (
@@ -344,7 +351,7 @@ const Toolkit = () => {
                 More AI & Automation Blueprints Coming Soon!
               </h2>
               <p className="text-lg text-[#64748B] dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-                I'm constantly building and curating advanced marketing automation workflows and AI models. Check back soon for more powerful tools like Figma templates, advanced email sequences, and more!
+                We're constantly building and curating advanced marketing automation workflows and AI models. Check back soon for more powerful tools like Figma templates, advanced email sequences, and more!
               </p>
               <Link
                 to="/contact"

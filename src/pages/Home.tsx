@@ -113,7 +113,7 @@ const Home = () => {
   const faqs = [
     {
       question: 'Do you work with early-stage startups?',
-      answer: 'If you\'re pre-product-market fit or have less than $5k in marketing budget, I\'m probably not the right fit. You need to validate your offer first.'
+      answer: 'If you\'re pre-product-market fit or have less than $5k in marketing budget, we\'re probably not the right fit. You need to validate your offer first.'
     },
     {
       question: 'How long until we see results?',
@@ -121,7 +121,7 @@ const Home = () => {
     },
     {
       question: 'Do you run ads or just automation?',
-      answer: 'Both. We manage paid acquisition and build the automation systems that nurture leads into demos. Always full-funnel optimization.'
+      answer: 'Both. We manage paid acquisition and build automation systems that nurture prospects into demos. Always full-funnel optimization.'
     },
     {
       question: 'Who will I be working with?',
@@ -175,7 +175,7 @@ const Home = () => {
                 <p className="text-gray-600">Done-for-you campaigns</p>
               </div>
               <div className="bg-gray-100 rounded-lg p-4 border border-gray-200">
-                <p className="text-gray-700 mb-1">✓ Lead Generation</p>
+                <p className="text-gray-700 mb-1">✓ Prospect Generation</p>
                 <p className="text-gray-600">Qualified prospects</p>
               </div>
               <div className="bg-gray-100 rounded-lg p-4 border border-gray-200">
@@ -298,8 +298,8 @@ const Home = () => {
             <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all">
               <div className="text-center">
                 <div className="text-6xl font-bold text-[#1E293B] mb-3">85%</div>
-                <p className="text-lg text-[#1E293B] font-semibold mb-1">More qualified leads</p>
-                <p className="text-sm text-gray-600">Better scoring & nurturing</p>
+                <p className="text-lg text-[#1E293B] font-semibold mb-1">More qualified prospects</p>
+                <p className="text-sm text-gray-600">Better scoring & automation</p>
               </div>
             </div>
             <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all">
@@ -466,7 +466,7 @@ const Home = () => {
                 </div>
                 <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
                   <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
-                  <p className="text-base text-gray-300">Sales team chasing unqualified leads</p>
+                  <p className="text-base text-gray-300">Sales team chasing unqualified prospects</p>
                 </div>
                 <div className="flex items-start gap-4 bg-[#0F172A] rounded-2xl p-4 border border-gray-700">
                   <Check className="w-6 h-6 text-white mt-0.5 flex-shrink-0" />
@@ -502,16 +502,17 @@ const Home = () => {
                   Let's talk
                 </h2>
                 <p className="text-xl text-gray-300 mb-6">
-                  Book a 15-minute call. I'll audit your funnel and tell you what's broken.
+                  Book a 15-minute call. We'll audit your funnel and tell you what's broken.
                 </p>
                 <p className="text-base text-gray-300 mb-8">
-                  I take on 2 projects per month. If I'm a fit, we'll start in 2-4 weeks.
+                  We take on 2 projects per month. If we're a fit, we'll start in 2-4 weeks.
                 </p>
                 
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-white" />
-                    <a href="mailto:victor@victorseda.xyz" className="text-white hover:text-gray-300 text-base font-medium">
+                    <a href="mailto:hello@agency.com" className="text-white hover:text-gray-300 text-base font-medium">
+                      hello@agency.com
                       victor@victorseda.xyz
                     </a>
                   </div>
